@@ -116,7 +116,7 @@ namespace FormMain
             this.buttonAboutUs.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAboutUs.Location = new System.Drawing.Point(12, 51);
             this.buttonAboutUs.Name = "buttonAboutUs";
-            this.buttonAboutUs.Size = new System.Drawing.Size(94, 27);
+            this.buttonAboutUs.Size = new System.Drawing.Size(110, 41);
             this.buttonAboutUs.TabIndex = 0;
             this.buttonAboutUs.Text = "О Нас";
             this.buttonAboutUs.UseVisualStyleBackColor = false;

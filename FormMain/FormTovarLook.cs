@@ -16,7 +16,7 @@ namespace FormMain
         {
             InitializeComponent();
         }
-
+        //------------------------------------------------------------------------------------------
         private void buttonClose_Click(object sender, EventArgs e)                //Exit But
         {
             Application.Exit();
@@ -32,6 +32,14 @@ namespace FormMain
         private void buttonMinimize_Click(object sender, EventArgs e)              //Minimized But
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        //------------------------------------------------------------------------------------------
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMainMenu Home = new FormMainMenu();
+            Home.Show();
         }
     }
 }

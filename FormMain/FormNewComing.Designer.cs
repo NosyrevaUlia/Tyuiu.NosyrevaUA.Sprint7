@@ -29,12 +29,27 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelUp = new System.Windows.Forms.Panel();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.labelNewComing = new System.Windows.Forms.Label();
+            this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelUp
+            // 
+            this.panelUp.Controls.Add(this.panelForButtons);
+            this.panelUp.Controls.Add(this.buttonHome);
+            this.panelUp.Controls.Add(this.labelNewComing);
+            this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUp.Location = new System.Drawing.Point(0, 0);
+            this.panelUp.Name = "panelUp";
+            this.panelUp.Size = new System.Drawing.Size(1028, 135);
+            this.panelUp.TabIndex = 2;
             // 
             // panelForButtons
             // 
@@ -46,7 +61,7 @@ namespace FormMain
             this.panelForButtons.Location = new System.Drawing.Point(0, 0);
             this.panelForButtons.Name = "panelForButtons";
             this.panelForButtons.Size = new System.Drawing.Size(1028, 45);
-            this.panelForButtons.TabIndex = 2;
+            this.panelForButtons.TabIndex = 3;
             // 
             // buttonMinimize
             // 
@@ -84,13 +99,42 @@ namespace FormMain
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonHome.Location = new System.Drawing.Point(12, 59);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(110, 41);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.Text = "На Главную";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // labelNewComing
+            // 
+            this.labelNewComing.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelNewComing.AutoSize = true;
+            this.labelNewComing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelNewComing.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNewComing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelNewComing.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelNewComing.Location = new System.Drawing.Point(486, 59);
+            this.labelNewComing.Name = "labelNewComing";
+            this.labelNewComing.Size = new System.Drawing.Size(206, 55);
+            this.labelNewComing.TabIndex = 0;
+            this.labelNewComing.Text = "Новинки";
+            this.labelNewComing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormNewComing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 594);
-            this.Controls.Add(this.panelForButtons);
+            this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -98,6 +142,8 @@ namespace FormMain
             this.Name = "FormNewComing";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panelUp.ResumeLayout(false);
+            this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -105,9 +151,12 @@ namespace FormMain
 
         #endregion
 
+        private System.Windows.Forms.Panel panelUp;
         private System.Windows.Forms.Panel panelForButtons;
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Label labelNewComing;
     }
 }

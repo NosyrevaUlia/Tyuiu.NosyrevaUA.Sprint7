@@ -30,12 +30,12 @@ namespace FormMain
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.labelAssortiment = new System.Windows.Forms.Label();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.labelAssortiment = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.SuspendLayout();
@@ -50,31 +50,6 @@ namespace FormMain
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 135);
             this.panel1.TabIndex = 0;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Location = new System.Drawing.Point(12, 59);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(110, 41);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.Text = "На Главную";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            // 
-            // labelAssortiment
-            // 
-            this.labelAssortiment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.labelAssortiment.AutoSize = true;
-            this.labelAssortiment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelAssortiment.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAssortiment.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelAssortiment.Location = new System.Drawing.Point(374, 59);
-            this.labelAssortiment.Name = "labelAssortiment";
-            this.labelAssortiment.Size = new System.Drawing.Size(416, 55);
-            this.labelAssortiment.TabIndex = 0;
-            this.labelAssortiment.Text = "Товары В Наличии";
-            this.labelAssortiment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelForButtons
             // 
@@ -123,6 +98,33 @@ namespace FormMain
             this.buttonClose.TabIndex = 0;
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonHome.Location = new System.Drawing.Point(12, 59);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(110, 41);
+            this.buttonHome.TabIndex = 1;
+            this.buttonHome.Text = "На Главную";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // labelAssortiment
+            // 
+            this.labelAssortiment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelAssortiment.AutoSize = true;
+            this.labelAssortiment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelAssortiment.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAssortiment.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelAssortiment.Location = new System.Drawing.Point(374, 59);
+            this.labelAssortiment.Name = "labelAssortiment";
+            this.labelAssortiment.Size = new System.Drawing.Size(416, 55);
+            this.labelAssortiment.TabIndex = 0;
+            this.labelAssortiment.Text = "Товары В Наличии";
+            this.labelAssortiment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormTovarLook
             // 
