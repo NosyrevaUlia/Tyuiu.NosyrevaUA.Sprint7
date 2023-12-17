@@ -44,15 +44,28 @@ namespace FormMain
 
         private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
         {
-            string[] userData = { textBoxYourNameFirst.Text,";",textBoxYourNameSecond.Text,";",textBoxYourNameThird.Text,";",textBoxAdress.Text,";",textBoxAdress.Text,";",textBoxYourNumber.Text };     
-                      
-            StringBuilder scv = new StringBuilder();
-            for(int i = 0; i<userData.Length; i++)
+            //Фамилия Имя Отчество Контакты Дата Адрес Номер
+            //string[] userData = { textBoxYourNameFirst.Text, textBoxYourNameSecond.Text, textBoxYourNameThird.Text, textBoxYourNumber.Text, textBoxDataDostavki.Text, textBoxAdress.Text};
+            if((textBoxYourNameFirst.Text) == "" || (textBoxYourNameSecond.Text=="") || (textBoxYourNameThird.Text=="") || (textBoxYourNumber.Text=="") || (textBoxDataDostavki.Text=="") || (textBoxAdress.Text == "")) { MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else
             {
-                scv.Append(userData[i]);
+                try
+                {   
+                    StringBuilder scv = new StringBuilder();
+
+                    string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
+                    scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text);
+                    File.AppendAllText(pathToSavescv, scv.ToString(), Encoding.GetEncoding(1251));
+
+                    DialogResult dialogres = MessageBox.Show("Заказ оформлен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Сбой при сохранении данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
-            File.AppendAllText(pathToSavescv, scv.ToString());
+            
+            
         }
     }
 }
