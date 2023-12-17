@@ -44,6 +44,7 @@ namespace FormMain
             this.labelChangeZakaz = new System.Windows.Forms.Label();
             this.buttonCgangeZakaz = new System.Windows.Forms.Button();
             this.buttonDoDelivery = new System.Windows.Forms.Button();
+            this.labelmainMenu = new System.Windows.Forms.Label();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -53,6 +54,7 @@ namespace FormMain
             // 
             // panelUp
             // 
+            this.panelUp.Controls.Add(this.labelmainMenu);
             this.panelUp.Controls.Add(this.panelForButtons);
             this.panelUp.Controls.Add(this.buttonAboutUs);
             this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
@@ -193,7 +195,8 @@ namespace FormMain
             // 
             // labelChangeZakaz
             // 
-            this.labelChangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelChangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelChangeZakaz.AutoSize = true;
             this.labelChangeZakaz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelChangeZakaz.Location = new System.Drawing.Point(89, 31);
@@ -204,7 +207,8 @@ namespace FormMain
             // 
             // buttonCgangeZakaz
             // 
-            this.buttonCgangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.buttonCgangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCgangeZakaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCgangeZakaz.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonCgangeZakaz.Location = new System.Drawing.Point(439, 20);
@@ -216,7 +220,7 @@ namespace FormMain
             // 
             // buttonDoDelivery
             // 
-            this.buttonDoDelivery.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonDoDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.buttonDoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDoDelivery.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -227,6 +231,17 @@ namespace FormMain
             this.buttonDoDelivery.Text = "Сделать Заказ";
             this.buttonDoDelivery.UseVisualStyleBackColor = false;
             this.buttonDoDelivery.Click += new System.EventHandler(this.buttonDoDelivery_Click);
+            // 
+            // labelmainMenu
+            // 
+            this.labelmainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelmainMenu.AutoSize = true;
+            this.labelmainMenu.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelmainMenu.Location = new System.Drawing.Point(414, 53);
+            this.labelmainMenu.Name = "labelmainMenu";
+            this.labelmainMenu.Size = new System.Drawing.Size(378, 58);
+            this.labelmainMenu.TabIndex = 2;
+            this.labelmainMenu.Text = "Главное Меню";
             // 
             // FormMainMenu
             // 
@@ -244,6 +259,7 @@ namespace FormMain
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelUp.ResumeLayout(false);
+            this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
             this.panelLeft.ResumeLayout(false);
             this.panelCentre.ResumeLayout(false);
@@ -270,6 +286,7 @@ namespace FormMain
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Button buttonMinimize;
+        private System.Windows.Forms.Label labelmainMenu;
     }
 }
 

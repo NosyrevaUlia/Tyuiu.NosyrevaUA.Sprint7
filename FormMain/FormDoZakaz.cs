@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace FormMain
 {
@@ -32,14 +33,26 @@ namespace FormMain
         private void buttonClose_Click(object sender, EventArgs e)                //Close But
         {
             Application.Exit();
-        }
-        //-------------------------------------------------------------------------------------
-        private void buttonHome_Click(object sender, EventArgs e)                 //Home
+        }        
+        private void buttonHome_Click(object sender, EventArgs e)                 //Home But
         {
             this.Hide();
             FormMainMenu Home = new FormMainMenu();
             Home.Show();
         }
-        
+        //------------------------------------------------------------------------------------------------------
+
+        private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
+        {
+            string[] userData = { textBoxYourNameFirst.Text,";",textBoxYourNameSecond.Text,";",textBoxYourNameThird.Text,";",textBoxAdress.Text,";",textBoxAdress.Text,";",textBoxYourNumber.Text };     
+                      
+            StringBuilder scv = new StringBuilder();
+            for(int i = 0; i<userData.Length; i++)
+            {
+                scv.Append(userData[i]);
+            }
+            string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
+            File.AppendAllText(pathToSavescv, scv.ToString());
+        }
     }
 }
