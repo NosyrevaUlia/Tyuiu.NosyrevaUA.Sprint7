@@ -36,8 +36,17 @@ namespace FormMain
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelZakaz = new System.Windows.Forms.Label();
+            this.panelRight = new System.Windows.Forms.Panel();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.textBoxYourNamePlease = new System.Windows.Forms.TextBox();
+            this.textBoxYourName = new System.Windows.Forms.TextBox();
+            this.textBoxAdressPlease = new System.Windows.Forms.TextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
+            this.textBoxYouNumberPlease = new System.Windows.Forms.TextBox();
+            this.textBoxYourNumber = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
+            this.panelRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUp
@@ -128,11 +137,98 @@ namespace FormMain
             this.labelZakaz.Text = "Заказ";
             this.labelZakaz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelRight
+            // 
+            this.panelRight.Controls.Add(this.textBoxYourNumber);
+            this.panelRight.Controls.Add(this.textBoxAdress);
+            this.panelRight.Controls.Add(this.textBoxYourName);
+            this.panelRight.Controls.Add(this.textBoxYouNumberPlease);
+            this.panelRight.Controls.Add(this.textBoxAdressPlease);
+            this.panelRight.Controls.Add(this.textBoxYourNamePlease);
+            this.panelRight.Controls.Add(this.labelDescription);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelRight.Location = new System.Drawing.Point(0, 135);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(588, 459);
+            this.panelRight.TabIndex = 2;
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDescription.Location = new System.Drawing.Point(13, 7);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(787, 34);
+            this.labelDescription.TabIndex = 0;
+            this.labelDescription.Text = "Пожалуйста, введите данные для оформления заказа:";
+            // 
+            // textBoxYourNamePlease
+            // 
+            this.textBoxYourNamePlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYourNamePlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYourNamePlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYourNamePlease.Location = new System.Drawing.Point(19, 74);
+            this.textBoxYourNamePlease.Name = "textBoxYourNamePlease";
+            this.textBoxYourNamePlease.ReadOnly = true;
+            this.textBoxYourNamePlease.Size = new System.Drawing.Size(62, 27);
+            this.textBoxYourNamePlease.TabIndex = 1;
+            this.textBoxYourNamePlease.Text = "ФИО:";
+            // 
+            // textBoxYourName
+            // 
+            this.textBoxYourName.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourName.Location = new System.Drawing.Point(19, 103);
+            this.textBoxYourName.Name = "textBoxYourName";
+            this.textBoxYourName.Size = new System.Drawing.Size(372, 30);
+            this.textBoxYourName.TabIndex = 2;
+            // 
+            // textBoxAdressPlease
+            // 
+            this.textBoxAdressPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxAdressPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAdressPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAdressPlease.Location = new System.Drawing.Point(19, 170);
+            this.textBoxAdressPlease.Name = "textBoxAdressPlease";
+            this.textBoxAdressPlease.ReadOnly = true;
+            this.textBoxAdressPlease.Size = new System.Drawing.Size(186, 27);
+            this.textBoxAdressPlease.TabIndex = 1;
+            this.textBoxAdressPlease.Text = "Адрес доставки:";
+            // 
+            // textBoxAdress
+            // 
+            this.textBoxAdress.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxAdress.Location = new System.Drawing.Point(19, 199);
+            this.textBoxAdress.Name = "textBoxAdress";
+            this.textBoxAdress.Size = new System.Drawing.Size(372, 30);
+            this.textBoxAdress.TabIndex = 2;
+            // 
+            // textBoxYouNumberPlease
+            // 
+            this.textBoxYouNumberPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYouNumberPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYouNumberPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYouNumberPlease.Location = new System.Drawing.Point(19, 268);
+            this.textBoxYouNumberPlease.Name = "textBoxYouNumberPlease";
+            this.textBoxYouNumberPlease.ReadOnly = true;
+            this.textBoxYouNumberPlease.Size = new System.Drawing.Size(355, 27);
+            this.textBoxYouNumberPlease.TabIndex = 1;
+            this.textBoxYouNumberPlease.Text = "Контактный телефон заказчика:";
+            // 
+            // textBoxYourNumber
+            // 
+            this.textBoxYourNumber.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourNumber.Location = new System.Drawing.Point(19, 297);
+            this.textBoxYourNumber.Name = "textBoxYourNumber";
+            this.textBoxYourNumber.Size = new System.Drawing.Size(372, 30);
+            this.textBoxYourNumber.TabIndex = 2;
+            // 
             // FormDoZakaz
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 594);
+            this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -143,6 +239,8 @@ namespace FormMain
             this.panelUp.ResumeLayout(false);
             this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
+            this.panelRight.ResumeLayout(false);
+            this.panelRight.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -156,5 +254,13 @@ namespace FormMain
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Label labelZakaz;
+        private System.Windows.Forms.Panel panelRight;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.TextBox textBoxYourNamePlease;
+        private System.Windows.Forms.TextBox textBoxYourNumber;
+        private System.Windows.Forms.TextBox textBoxAdress;
+        private System.Windows.Forms.TextBox textBoxYourName;
+        private System.Windows.Forms.TextBox textBoxYouNumberPlease;
+        private System.Windows.Forms.TextBox textBoxAdressPlease;
     }
 }
