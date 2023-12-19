@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using FirstLib;
 
 namespace FormMain
@@ -19,6 +20,20 @@ namespace FormMain
         {
             InitializeComponent();
         }
+        //---------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------    Двигать окно
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int WMsg, int wParam, int lParam);
+
+        private void panelForButtons_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        //---------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------
 
         private void buttonDoDelivery_Click(object sender, EventArgs e)           //Кнопка заказа
         {
@@ -37,14 +52,17 @@ namespace FormMain
         {
             Application.Exit();
         }
+
         private void buttonMaximize_Click(object sender, EventArgs e)             //Кнопка во весь экран
         {
-            if(WindowState== FormWindowState.Normal)
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; //Ограничение
+            if (WindowState== FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
             else { this.WindowState = FormWindowState.Normal; }
         }
+
         private void buttonMinimize_Click(object sender, EventArgs e)             //Кнопка сжатия
         {
             this.WindowState = FormWindowState.Minimized;
@@ -65,5 +83,7 @@ namespace FormMain
             formNewComing.Show();
 
         }
+
+       
     }
 }

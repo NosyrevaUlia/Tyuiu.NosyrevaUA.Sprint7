@@ -37,22 +37,22 @@ namespace FormMain
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelZakaz = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.textBoxYourNameFirstPlease = new System.Windows.Forms.TextBox();
-            this.textBoxYourNameFirst = new System.Windows.Forms.TextBox();
-            this.textBoxAdressPlease = new System.Windows.Forms.TextBox();
-            this.textBoxAdress = new System.Windows.Forms.TextBox();
-            this.textBoxYouNumberPlease = new System.Windows.Forms.TextBox();
-            this.textBoxYourNumber = new System.Windows.Forms.TextBox();
-            this.textBoxDataDostavkiPlease = new System.Windows.Forms.TextBox();
             this.textBoxDataDostavki = new System.Windows.Forms.TextBox();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.splitterLeftRight = new System.Windows.Forms.Splitter();
-            this.buttonDoZAKAZ = new System.Windows.Forms.Button();
-            this.textBoxYourNameSecond = new System.Windows.Forms.TextBox();
+            this.textBoxYourNumber = new System.Windows.Forms.TextBox();
+            this.textBoxAdress = new System.Windows.Forms.TextBox();
             this.textBoxYourNameThird = new System.Windows.Forms.TextBox();
-            this.textBoxYourNameSecondPlease = new System.Windows.Forms.TextBox();
+            this.textBoxYourNameSecond = new System.Windows.Forms.TextBox();
+            this.textBoxYourNameFirst = new System.Windows.Forms.TextBox();
+            this.textBoxDataDostavkiPlease = new System.Windows.Forms.TextBox();
+            this.textBoxYouNumberPlease = new System.Windows.Forms.TextBox();
+            this.textBoxAdressPlease = new System.Windows.Forms.TextBox();
             this.textBoxYourNameThirdPlease = new System.Windows.Forms.TextBox();
+            this.textBoxYourNameSecondPlease = new System.Windows.Forms.TextBox();
+            this.textBoxYourNameFirstPlease = new System.Windows.Forms.TextBox();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.panelRight = new System.Windows.Forms.Panel();
+            this.buttonDoZAKAZ = new System.Windows.Forms.Button();
+            this.splitterLeftRight = new System.Windows.Forms.Splitter();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -81,6 +81,7 @@ namespace FormMain
             this.panelForButtons.Name = "panelForButtons";
             this.panelForButtons.Size = new System.Drawing.Size(1028, 45);
             this.panelForButtons.TabIndex = 3;
+            this.panelForButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForButtons_MouseDown);
             // 
             // buttonMinimize
             // 
@@ -168,48 +169,21 @@ namespace FormMain
             this.panelLeft.Size = new System.Drawing.Size(588, 459);
             this.panelLeft.TabIndex = 2;
             // 
-            // labelDescription
+            // textBoxDataDostavki
             // 
-            this.labelDescription.AutoSize = true;
-            this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.labelDescription.Location = new System.Drawing.Point(13, 7);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(787, 34);
-            this.labelDescription.TabIndex = 0;
-            this.labelDescription.Text = "Пожалуйста, введите данные для оформления заказа:";
+            this.textBoxDataDostavki.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxDataDostavki.Location = new System.Drawing.Point(19, 396);
+            this.textBoxDataDostavki.Name = "textBoxDataDostavki";
+            this.textBoxDataDostavki.Size = new System.Drawing.Size(372, 30);
+            this.textBoxDataDostavki.TabIndex = 2;
             // 
-            // textBoxYourNameFirstPlease
+            // textBoxYourNumber
             // 
-            this.textBoxYourNameFirstPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxYourNameFirstPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxYourNameFirstPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxYourNameFirstPlease.Location = new System.Drawing.Point(19, 74);
-            this.textBoxYourNameFirstPlease.Name = "textBoxYourNameFirstPlease";
-            this.textBoxYourNameFirstPlease.ReadOnly = true;
-            this.textBoxYourNameFirstPlease.Size = new System.Drawing.Size(186, 27);
-            this.textBoxYourNameFirstPlease.TabIndex = 1;
-            this.textBoxYourNameFirstPlease.Text = "Фамилия:";
-            // 
-            // textBoxYourNameFirst
-            // 
-            this.textBoxYourNameFirst.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxYourNameFirst.Location = new System.Drawing.Point(19, 103);
-            this.textBoxYourNameFirst.Name = "textBoxYourNameFirst";
-            this.textBoxYourNameFirst.Size = new System.Drawing.Size(186, 30);
-            this.textBoxYourNameFirst.TabIndex = 2;
-            // 
-            // textBoxAdressPlease
-            // 
-            this.textBoxAdressPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxAdressPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAdressPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAdressPlease.Location = new System.Drawing.Point(19, 170);
-            this.textBoxAdressPlease.Name = "textBoxAdressPlease";
-            this.textBoxAdressPlease.ReadOnly = true;
-            this.textBoxAdressPlease.Size = new System.Drawing.Size(186, 27);
-            this.textBoxAdressPlease.TabIndex = 1;
-            this.textBoxAdressPlease.Text = "Адрес доставки:";
+            this.textBoxYourNumber.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourNumber.Location = new System.Drawing.Point(19, 297);
+            this.textBoxYourNumber.Name = "textBoxYourNumber";
+            this.textBoxYourNumber.Size = new System.Drawing.Size(372, 30);
+            this.textBoxYourNumber.TabIndex = 2;
             // 
             // textBoxAdress
             // 
@@ -219,25 +193,29 @@ namespace FormMain
             this.textBoxAdress.Size = new System.Drawing.Size(372, 30);
             this.textBoxAdress.TabIndex = 2;
             // 
-            // textBoxYouNumberPlease
+            // textBoxYourNameThird
             // 
-            this.textBoxYouNumberPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxYouNumberPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxYouNumberPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxYouNumberPlease.Location = new System.Drawing.Point(19, 268);
-            this.textBoxYouNumberPlease.Name = "textBoxYouNumberPlease";
-            this.textBoxYouNumberPlease.ReadOnly = true;
-            this.textBoxYouNumberPlease.Size = new System.Drawing.Size(355, 27);
-            this.textBoxYouNumberPlease.TabIndex = 1;
-            this.textBoxYouNumberPlease.Text = "Контактный телефон заказчика:";
+            this.textBoxYourNameThird.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourNameThird.Location = new System.Drawing.Point(405, 103);
+            this.textBoxYourNameThird.Name = "textBoxYourNameThird";
+            this.textBoxYourNameThird.Size = new System.Drawing.Size(186, 30);
+            this.textBoxYourNameThird.TabIndex = 2;
             // 
-            // textBoxYourNumber
+            // textBoxYourNameSecond
             // 
-            this.textBoxYourNumber.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxYourNumber.Location = new System.Drawing.Point(19, 297);
-            this.textBoxYourNumber.Name = "textBoxYourNumber";
-            this.textBoxYourNumber.Size = new System.Drawing.Size(372, 30);
-            this.textBoxYourNumber.TabIndex = 2;
+            this.textBoxYourNameSecond.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourNameSecond.Location = new System.Drawing.Point(211, 103);
+            this.textBoxYourNameSecond.Name = "textBoxYourNameSecond";
+            this.textBoxYourNameSecond.Size = new System.Drawing.Size(186, 30);
+            this.textBoxYourNameSecond.TabIndex = 2;
+            // 
+            // textBoxYourNameFirst
+            // 
+            this.textBoxYourNameFirst.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxYourNameFirst.Location = new System.Drawing.Point(19, 103);
+            this.textBoxYourNameFirst.Name = "textBoxYourNameFirst";
+            this.textBoxYourNameFirst.Size = new System.Drawing.Size(186, 30);
+            this.textBoxYourNameFirst.TabIndex = 2;
             // 
             // textBoxDataDostavkiPlease
             // 
@@ -251,13 +229,76 @@ namespace FormMain
             this.textBoxDataDostavkiPlease.TabIndex = 1;
             this.textBoxDataDostavkiPlease.Text = "Дата доставки:";
             // 
-            // textBoxDataDostavki
+            // textBoxYouNumberPlease
             // 
-            this.textBoxDataDostavki.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxDataDostavki.Location = new System.Drawing.Point(19, 396);
-            this.textBoxDataDostavki.Name = "textBoxDataDostavki";
-            this.textBoxDataDostavki.Size = new System.Drawing.Size(372, 30);
-            this.textBoxDataDostavki.TabIndex = 2;
+            this.textBoxYouNumberPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYouNumberPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYouNumberPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYouNumberPlease.Location = new System.Drawing.Point(19, 268);
+            this.textBoxYouNumberPlease.Name = "textBoxYouNumberPlease";
+            this.textBoxYouNumberPlease.ReadOnly = true;
+            this.textBoxYouNumberPlease.Size = new System.Drawing.Size(355, 27);
+            this.textBoxYouNumberPlease.TabIndex = 1;
+            this.textBoxYouNumberPlease.Text = "Контактный телефон заказчика:";
+            // 
+            // textBoxAdressPlease
+            // 
+            this.textBoxAdressPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxAdressPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAdressPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAdressPlease.Location = new System.Drawing.Point(19, 170);
+            this.textBoxAdressPlease.Name = "textBoxAdressPlease";
+            this.textBoxAdressPlease.ReadOnly = true;
+            this.textBoxAdressPlease.Size = new System.Drawing.Size(186, 27);
+            this.textBoxAdressPlease.TabIndex = 1;
+            this.textBoxAdressPlease.Text = "Адрес доставки:";
+            // 
+            // textBoxYourNameThirdPlease
+            // 
+            this.textBoxYourNameThirdPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYourNameThirdPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYourNameThirdPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYourNameThirdPlease.Location = new System.Drawing.Point(405, 74);
+            this.textBoxYourNameThirdPlease.Name = "textBoxYourNameThirdPlease";
+            this.textBoxYourNameThirdPlease.ReadOnly = true;
+            this.textBoxYourNameThirdPlease.Size = new System.Drawing.Size(183, 27);
+            this.textBoxYourNameThirdPlease.TabIndex = 1;
+            this.textBoxYourNameThirdPlease.Text = "Отчество:";
+            // 
+            // textBoxYourNameSecondPlease
+            // 
+            this.textBoxYourNameSecondPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYourNameSecondPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYourNameSecondPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYourNameSecondPlease.Location = new System.Drawing.Point(211, 74);
+            this.textBoxYourNameSecondPlease.Name = "textBoxYourNameSecondPlease";
+            this.textBoxYourNameSecondPlease.ReadOnly = true;
+            this.textBoxYourNameSecondPlease.Size = new System.Drawing.Size(186, 27);
+            this.textBoxYourNameSecondPlease.TabIndex = 1;
+            this.textBoxYourNameSecondPlease.Text = "Имя:";
+            // 
+            // textBoxYourNameFirstPlease
+            // 
+            this.textBoxYourNameFirstPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxYourNameFirstPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxYourNameFirstPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxYourNameFirstPlease.Location = new System.Drawing.Point(19, 74);
+            this.textBoxYourNameFirstPlease.Name = "textBoxYourNameFirstPlease";
+            this.textBoxYourNameFirstPlease.ReadOnly = true;
+            this.textBoxYourNameFirstPlease.Size = new System.Drawing.Size(186, 27);
+            this.textBoxYourNameFirstPlease.TabIndex = 1;
+            this.textBoxYourNameFirstPlease.Text = "Фамилия:";
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.labelDescription.Location = new System.Drawing.Point(13, 7);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(787, 34);
+            this.labelDescription.TabIndex = 0;
+            this.labelDescription.Text = "Пожалуйста, введите данные для оформления заказа:";
             // 
             // panelRight
             // 
@@ -268,14 +309,6 @@ namespace FormMain
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(440, 459);
             this.panelRight.TabIndex = 3;
-            // 
-            // splitterLeftRight
-            // 
-            this.splitterLeftRight.Location = new System.Drawing.Point(0, 0);
-            this.splitterLeftRight.Name = "splitterLeftRight";
-            this.splitterLeftRight.Size = new System.Drawing.Size(3, 459);
-            this.splitterLeftRight.TabIndex = 0;
-            this.splitterLeftRight.TabStop = false;
             // 
             // buttonDoZAKAZ
             // 
@@ -290,45 +323,13 @@ namespace FormMain
             this.buttonDoZAKAZ.UseVisualStyleBackColor = false;
             this.buttonDoZAKAZ.Click += new System.EventHandler(this.buttonDoZAKAZ_Click);
             // 
-            // textBoxYourNameSecond
+            // splitterLeftRight
             // 
-            this.textBoxYourNameSecond.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxYourNameSecond.Location = new System.Drawing.Point(211, 103);
-            this.textBoxYourNameSecond.Name = "textBoxYourNameSecond";
-            this.textBoxYourNameSecond.Size = new System.Drawing.Size(186, 30);
-            this.textBoxYourNameSecond.TabIndex = 2;
-            // 
-            // textBoxYourNameThird
-            // 
-            this.textBoxYourNameThird.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBoxYourNameThird.Location = new System.Drawing.Point(405, 103);
-            this.textBoxYourNameThird.Name = "textBoxYourNameThird";
-            this.textBoxYourNameThird.Size = new System.Drawing.Size(186, 30);
-            this.textBoxYourNameThird.TabIndex = 2;
-            // 
-            // textBoxYourNameSecondPlease
-            // 
-            this.textBoxYourNameSecondPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxYourNameSecondPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxYourNameSecondPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxYourNameSecondPlease.Location = new System.Drawing.Point(211, 74);
-            this.textBoxYourNameSecondPlease.Name = "textBoxYourNameSecondPlease";
-            this.textBoxYourNameSecondPlease.ReadOnly = true;
-            this.textBoxYourNameSecondPlease.Size = new System.Drawing.Size(186, 27);
-            this.textBoxYourNameSecondPlease.TabIndex = 1;
-            this.textBoxYourNameSecondPlease.Text = "Имя:";
-            // 
-            // textBoxYourNameThirdPlease
-            // 
-            this.textBoxYourNameThirdPlease.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxYourNameThirdPlease.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxYourNameThirdPlease.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxYourNameThirdPlease.Location = new System.Drawing.Point(405, 74);
-            this.textBoxYourNameThirdPlease.Name = "textBoxYourNameThirdPlease";
-            this.textBoxYourNameThirdPlease.ReadOnly = true;
-            this.textBoxYourNameThirdPlease.Size = new System.Drawing.Size(183, 27);
-            this.textBoxYourNameThirdPlease.TabIndex = 1;
-            this.textBoxYourNameThirdPlease.Text = "Отчество:";
+            this.splitterLeftRight.Location = new System.Drawing.Point(0, 0);
+            this.splitterLeftRight.Name = "splitterLeftRight";
+            this.splitterLeftRight.Size = new System.Drawing.Size(3, 459);
+            this.splitterLeftRight.TabIndex = 0;
+            this.splitterLeftRight.TabStop = false;
             // 
             // FormDoZakaz
             // 

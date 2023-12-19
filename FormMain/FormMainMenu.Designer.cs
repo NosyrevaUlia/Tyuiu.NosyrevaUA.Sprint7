@@ -30,6 +30,7 @@ namespace FormMain
         private void InitializeComponent()
         {
             this.panelUp = new System.Windows.Forms.Panel();
+            this.labelmainMenu = new System.Windows.Forms.Label();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@ namespace FormMain
             this.labelChangeZakaz = new System.Windows.Forms.Label();
             this.buttonCgangeZakaz = new System.Windows.Forms.Button();
             this.buttonDoDelivery = new System.Windows.Forms.Button();
-            this.labelmainMenu = new System.Windows.Forms.Label();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -63,6 +63,17 @@ namespace FormMain
             this.panelUp.Size = new System.Drawing.Size(1028, 102);
             this.panelUp.TabIndex = 0;
             // 
+            // labelmainMenu
+            // 
+            this.labelmainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelmainMenu.AutoSize = true;
+            this.labelmainMenu.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelmainMenu.Location = new System.Drawing.Point(414, 53);
+            this.labelmainMenu.Name = "labelmainMenu";
+            this.labelmainMenu.Size = new System.Drawing.Size(378, 58);
+            this.labelmainMenu.TabIndex = 2;
+            this.labelmainMenu.Text = "Главное Меню";
+            // 
             // panelForButtons
             // 
             this.panelForButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -74,6 +85,7 @@ namespace FormMain
             this.panelForButtons.Name = "panelForButtons";
             this.panelForButtons.Size = new System.Drawing.Size(1028, 45);
             this.panelForButtons.TabIndex = 1;
+            this.panelForButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForButtons_MouseDown);
             // 
             // buttonMinimize
             // 
@@ -231,17 +243,6 @@ namespace FormMain
             this.buttonDoDelivery.Text = "Сделать Заказ";
             this.buttonDoDelivery.UseVisualStyleBackColor = false;
             this.buttonDoDelivery.Click += new System.EventHandler(this.buttonDoDelivery_Click);
-            // 
-            // labelmainMenu
-            // 
-            this.labelmainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.labelmainMenu.AutoSize = true;
-            this.labelmainMenu.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelmainMenu.Location = new System.Drawing.Point(414, 53);
-            this.labelmainMenu.Name = "labelmainMenu";
-            this.labelmainMenu.Size = new System.Drawing.Size(378, 58);
-            this.labelmainMenu.TabIndex = 2;
-            this.labelmainMenu.Text = "Главное Меню";
             // 
             // FormMainMenu
             // 

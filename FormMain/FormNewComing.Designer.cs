@@ -62,6 +62,7 @@ namespace FormMain
             this.panelForButtons.Name = "panelForButtons";
             this.panelForButtons.Size = new System.Drawing.Size(1028, 45);
             this.panelForButtons.TabIndex = 3;
+            this.panelForButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForButtons_MouseDown);
             // 
             // buttonMinimize
             // 
