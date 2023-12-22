@@ -68,6 +68,7 @@ namespace FormMain
 
         private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
         {
+            int number = 0;
             //Фамилия Имя Отчество Контакты Дата Адрес Номер
             //string[] userData = { textBoxYourNameFirst.Text, textBoxYourNameSecond.Text, textBoxYourNameThird.Text, textBoxYourNumber.Text, textBoxDataDostavki.Text, textBoxAdress.Text};
             if((textBoxYourNameFirst.Text) == "" || (textBoxYourNameSecond.Text=="") || (textBoxYourNameThird.Text=="") || (textBoxYourNumber.Text=="") || (textBoxDataDostavki.Text=="") || (textBoxAdress.Text == "")) { MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -78,7 +79,8 @@ namespace FormMain
                     StringBuilder scv = new StringBuilder();
 
                     string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
-                    scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text);
+                    number++;
+                    scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text +";"+number);
                     File.AppendAllText(pathToSavescv, scv.ToString(), Encoding.GetEncoding(1251));
 
                     DialogResult dialogres = MessageBox.Show("Заказ оформлен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);

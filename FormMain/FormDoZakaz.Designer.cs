@@ -53,6 +53,8 @@ namespace FormMain
             this.panelRight = new System.Windows.Forms.Panel();
             this.buttonDoZAKAZ = new System.Windows.Forms.Button();
             this.splitterLeftRight = new System.Windows.Forms.Splitter();
+            this.buttonDobavitTorars = new System.Windows.Forms.Button();
+            this.buttonBucket = new System.Windows.Forms.Button();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -302,6 +304,8 @@ namespace FormMain
             // 
             // panelRight
             // 
+            this.panelRight.Controls.Add(this.buttonBucket);
+            this.panelRight.Controls.Add(this.buttonDobavitTorars);
             this.panelRight.Controls.Add(this.buttonDoZAKAZ);
             this.panelRight.Controls.Add(this.splitterLeftRight);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -331,6 +335,28 @@ namespace FormMain
             this.splitterLeftRight.Size = new System.Drawing.Size(3, 459);
             this.splitterLeftRight.TabIndex = 0;
             this.splitterLeftRight.TabStop = false;
+            // 
+            // buttonDobavitTorars
+            // 
+            this.buttonDobavitTorars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonDobavitTorars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDobavitTorars.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDobavitTorars.Location = new System.Drawing.Point(49, 17);
+            this.buttonDobavitTorars.Name = "buttonDobavitTorars";
+            this.buttonDobavitTorars.Size = new System.Drawing.Size(379, 84);
+            this.buttonDobavitTorars.TabIndex = 2;
+            this.buttonDobavitTorars.Text = "Добавить Товары";
+            this.buttonDobavitTorars.UseVisualStyleBackColor = false;
+            // 
+            // buttonBucket
+            // 
+            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBucket.Location = new System.Drawing.Point(314, 117);
+            this.buttonBucket.Name = "buttonBucket";
+            this.buttonBucket.Size = new System.Drawing.Size(114, 80);
+            this.buttonBucket.TabIndex = 3;
+            this.buttonBucket.UseVisualStyleBackColor = false;
             // 
             // FormDoZakaz
             // 
@@ -381,5 +407,7 @@ namespace FormMain
         private System.Windows.Forms.TextBox textBoxYourNameSecond;
         private System.Windows.Forms.TextBox textBoxYourNameThirdPlease;
         private System.Windows.Forms.TextBox textBoxYourNameSecondPlease;
+        private System.Windows.Forms.Button buttonDobavitTorars;
+        private System.Windows.Forms.Button buttonBucket;
     }
 }

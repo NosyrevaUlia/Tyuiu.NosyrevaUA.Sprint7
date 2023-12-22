@@ -29,6 +29,7 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTovarLook));
             this.panelUp = new System.Windows.Forms.Panel();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
@@ -37,17 +38,21 @@ namespace FormMain
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelAssortiment = new System.Windows.Forms.Label();
             this.panelTovars = new System.Windows.Forms.Panel();
-            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
             this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSinsue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSinSue = new System.Windows.Forms.PictureBox();
+            this.labelDiluc = new System.Windows.Forms.Label();
+            this.labelSucrose = new System.Windows.Forms.Label();
+            this.labelLumine = new System.Windows.Forms.Label();
+            this.labelSinSue = new System.Windows.Forms.Label();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelTovars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinsue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -139,9 +144,13 @@ namespace FormMain
             // 
             // panelTovars
             // 
-            this.panelTovars.Controls.Add(this.pictureBoxSucrose);
-            this.panelTovars.Controls.Add(this.pictureBoxSinsue);
+            this.panelTovars.Controls.Add(this.labelSinSue);
+            this.panelTovars.Controls.Add(this.labelLumine);
+            this.panelTovars.Controls.Add(this.labelSucrose);
+            this.panelTovars.Controls.Add(this.labelDiluc);
+            this.panelTovars.Controls.Add(this.pictureBoxSinSue);
             this.panelTovars.Controls.Add(this.pictureBoxLumine);
+            this.panelTovars.Controls.Add(this.pictureBoxSucrose);
             this.panelTovars.Controls.Add(this.pictureBoxDiluc);
             this.panelTovars.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTovars.Location = new System.Drawing.Point(0, 135);
@@ -149,40 +158,91 @@ namespace FormMain
             this.panelTovars.Size = new System.Drawing.Size(1028, 459);
             this.panelTovars.TabIndex = 1;
             // 
+            // pictureBoxDiluc
+            // 
+            this.pictureBoxDiluc.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiluc.Image")));
+            this.pictureBoxDiluc.Location = new System.Drawing.Point(4, 7);
+            this.pictureBoxDiluc.Name = "pictureBoxDiluc";
+            this.pictureBoxDiluc.Size = new System.Drawing.Size(285, 211);
+            this.pictureBoxDiluc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDiluc.TabIndex = 0;
+            this.pictureBoxDiluc.TabStop = false;
+            // 
             // pictureBoxSucrose
             // 
             this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSucrose.Location = new System.Drawing.Point(494, 3);
+            this.pictureBoxSucrose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSucrose.Image")));
+            this.pictureBoxSucrose.Location = new System.Drawing.Point(505, 3);
             this.pictureBoxSucrose.Name = "pictureBoxSucrose";
-            this.pictureBoxSucrose.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxSucrose.Size = new System.Drawing.Size(285, 215);
+            this.pictureBoxSucrose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxSucrose.TabIndex = 0;
             this.pictureBoxSucrose.TabStop = false;
-            // 
-            // pictureBoxDiluc
-            // 
-            this.pictureBoxDiluc.Location = new System.Drawing.Point(0, 3);
-            this.pictureBoxDiluc.Name = "pictureBoxDiluc";
-            this.pictureBoxDiluc.Size = new System.Drawing.Size(334, 221);
-            this.pictureBoxDiluc.TabIndex = 0;
-            this.pictureBoxDiluc.TabStop = false;
             // 
             // pictureBoxLumine
             // 
             this.pictureBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBoxLumine.Location = new System.Drawing.Point(0, 235);
+            this.pictureBoxLumine.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLumine.Image")));
+            this.pictureBoxLumine.Location = new System.Drawing.Point(4, 226);
             this.pictureBoxLumine.Name = "pictureBoxLumine";
-            this.pictureBoxLumine.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxLumine.Size = new System.Drawing.Size(285, 221);
+            this.pictureBoxLumine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLumine.TabIndex = 0;
             this.pictureBoxLumine.TabStop = false;
             // 
-            // pictureBoxSinsue
+            // pictureBoxSinSue
             // 
-            this.pictureBoxSinsue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSinsue.Location = new System.Drawing.Point(494, 235);
-            this.pictureBoxSinsue.Name = "pictureBoxSinsue";
-            this.pictureBoxSinsue.Size = new System.Drawing.Size(334, 221);
-            this.pictureBoxSinsue.TabIndex = 0;
-            this.pictureBoxSinsue.TabStop = false;
+            this.pictureBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSinSue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSinSue.Image")));
+            this.pictureBoxSinSue.Location = new System.Drawing.Point(505, 224);
+            this.pictureBoxSinSue.Name = "pictureBoxSinSue";
+            this.pictureBoxSinSue.Size = new System.Drawing.Size(285, 223);
+            this.pictureBoxSinSue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSinSue.TabIndex = 0;
+            this.pictureBoxSinSue.TabStop = false;
+            // 
+            // labelDiluc
+            // 
+            this.labelDiluc.AutoSize = true;
+            this.labelDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDiluc.Location = new System.Drawing.Point(277, 7);
+            this.labelDiluc.Name = "labelDiluc";
+            this.labelDiluc.Size = new System.Drawing.Size(333, 30);
+            this.labelDiluc.TabIndex = 1;
+            this.labelDiluc.Text = "Фигурка акриловая Дилюк";
+            // 
+            // labelSucrose
+            // 
+            this.labelSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSucrose.AutoSize = true;
+            this.labelSucrose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSucrose.Location = new System.Drawing.Point(759, 3);
+            this.labelSucrose.Name = "labelSucrose";
+            this.labelSucrose.Size = new System.Drawing.Size(377, 30);
+            this.labelSucrose.TabIndex = 1;
+            this.labelSucrose.Text = "Фигурка акриловая Сахароза";
+            // 
+            // labelLumine
+            // 
+            this.labelLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelLumine.AutoSize = true;
+            this.labelLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLumine.Location = new System.Drawing.Point(271, 226);
+            this.labelLumine.Name = "labelLumine";
+            this.labelLumine.Size = new System.Drawing.Size(342, 30);
+            this.labelLumine.TabIndex = 1;
+            this.labelLumine.Text = "Фигурка акриловая Люмин";
+            // 
+            // labelSinSue
+            // 
+            this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSinSue.AutoSize = true;
+            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSinSue.Location = new System.Drawing.Point(773, 226);
+            this.labelSinSue.Name = "labelSinSue";
+            this.labelSinSue.Size = new System.Drawing.Size(351, 30);
+            this.labelSinSue.TabIndex = 1;
+            this.labelSinSue.Text = "Фигурка акриловая Син Сю";
             // 
             // FormTovarLook
             // 
@@ -194,7 +254,7 @@ namespace FormMain
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.MinimumSize = new System.Drawing.Size(900, 630);
+            this.MinimumSize = new System.Drawing.Size(1050, 650);
             this.Name = "FormTovarLook";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -202,10 +262,11 @@ namespace FormMain
             this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
             this.panelTovars.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
+            this.panelTovars.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinsue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,9 +281,13 @@ namespace FormMain
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panelTovars;
+        private System.Windows.Forms.PictureBox pictureBoxSinSue;
+        private System.Windows.Forms.PictureBox pictureBoxLumine;
         private System.Windows.Forms.PictureBox pictureBoxSucrose;
         private System.Windows.Forms.PictureBox pictureBoxDiluc;
-        private System.Windows.Forms.PictureBox pictureBoxSinsue;
-        private System.Windows.Forms.PictureBox pictureBoxLumine;
+        private System.Windows.Forms.Label labelSinSue;
+        private System.Windows.Forms.Label labelLumine;
+        private System.Windows.Forms.Label labelSucrose;
+        private System.Windows.Forms.Label labelDiluc;
     }
 }
