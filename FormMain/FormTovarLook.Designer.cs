@@ -38,21 +38,25 @@ namespace FormMain
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelAssortiment = new System.Windows.Forms.Label();
             this.panelTovars = new System.Windows.Forms.Panel();
-            this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSinSue = new System.Windows.Forms.PictureBox();
-            this.labelDiluc = new System.Windows.Forms.Label();
-            this.labelSucrose = new System.Windows.Forms.Label();
-            this.labelLumine = new System.Windows.Forms.Label();
             this.labelSinSue = new System.Windows.Forms.Label();
+            this.labelLumine = new System.Windows.Forms.Label();
+            this.labelSucrose = new System.Windows.Forms.Label();
+            this.labelDiluc = new System.Windows.Forms.Label();
+            this.pictureBoxSinSue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
+            this.textBoxDiluc = new System.Windows.Forms.TextBox();
+            this.textBoxSucrose = new System.Windows.Forms.TextBox();
+            this.textBoxLumine = new System.Windows.Forms.TextBox();
+            this.textBoxSinSue = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelTovars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -144,6 +148,10 @@ namespace FormMain
             // 
             // panelTovars
             // 
+            this.panelTovars.Controls.Add(this.textBoxSinSue);
+            this.panelTovars.Controls.Add(this.textBoxLumine);
+            this.panelTovars.Controls.Add(this.textBoxSucrose);
+            this.panelTovars.Controls.Add(this.textBoxDiluc);
             this.panelTovars.Controls.Add(this.labelSinSue);
             this.panelTovars.Controls.Add(this.labelLumine);
             this.panelTovars.Controls.Add(this.labelSucrose);
@@ -158,58 +166,27 @@ namespace FormMain
             this.panelTovars.Size = new System.Drawing.Size(1028, 459);
             this.panelTovars.TabIndex = 1;
             // 
-            // pictureBoxDiluc
+            // labelSinSue
             // 
-            this.pictureBoxDiluc.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiluc.Image")));
-            this.pictureBoxDiluc.Location = new System.Drawing.Point(4, 7);
-            this.pictureBoxDiluc.Name = "pictureBoxDiluc";
-            this.pictureBoxDiluc.Size = new System.Drawing.Size(285, 211);
-            this.pictureBoxDiluc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDiluc.TabIndex = 0;
-            this.pictureBoxDiluc.TabStop = false;
+            this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSinSue.AutoSize = true;
+            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSinSue.Location = new System.Drawing.Point(759, 221);
+            this.labelSinSue.Name = "labelSinSue";
+            this.labelSinSue.Size = new System.Drawing.Size(351, 30);
+            this.labelSinSue.TabIndex = 1;
+            this.labelSinSue.Text = "Фигурка акриловая Син Сю";
             // 
-            // pictureBoxSucrose
+            // labelLumine
             // 
-            this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSucrose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSucrose.Image")));
-            this.pictureBoxSucrose.Location = new System.Drawing.Point(505, 3);
-            this.pictureBoxSucrose.Name = "pictureBoxSucrose";
-            this.pictureBoxSucrose.Size = new System.Drawing.Size(285, 215);
-            this.pictureBoxSucrose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSucrose.TabIndex = 0;
-            this.pictureBoxSucrose.TabStop = false;
-            // 
-            // pictureBoxLumine
-            // 
-            this.pictureBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pictureBoxLumine.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLumine.Image")));
-            this.pictureBoxLumine.Location = new System.Drawing.Point(4, 226);
-            this.pictureBoxLumine.Name = "pictureBoxLumine";
-            this.pictureBoxLumine.Size = new System.Drawing.Size(285, 221);
-            this.pictureBoxLumine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLumine.TabIndex = 0;
-            this.pictureBoxLumine.TabStop = false;
-            // 
-            // pictureBoxSinSue
-            // 
-            this.pictureBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSinSue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSinSue.Image")));
-            this.pictureBoxSinSue.Location = new System.Drawing.Point(505, 224);
-            this.pictureBoxSinSue.Name = "pictureBoxSinSue";
-            this.pictureBoxSinSue.Size = new System.Drawing.Size(285, 223);
-            this.pictureBoxSinSue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSinSue.TabIndex = 0;
-            this.pictureBoxSinSue.TabStop = false;
-            // 
-            // labelDiluc
-            // 
-            this.labelDiluc.AutoSize = true;
-            this.labelDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDiluc.Location = new System.Drawing.Point(277, 7);
-            this.labelDiluc.Name = "labelDiluc";
-            this.labelDiluc.Size = new System.Drawing.Size(333, 30);
-            this.labelDiluc.TabIndex = 1;
-            this.labelDiluc.Text = "Фигурка акриловая Дилюк";
+            this.labelLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelLumine.AutoSize = true;
+            this.labelLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLumine.Location = new System.Drawing.Point(277, 224);
+            this.labelLumine.Name = "labelLumine";
+            this.labelLumine.Size = new System.Drawing.Size(342, 30);
+            this.labelLumine.TabIndex = 1;
+            this.labelLumine.Text = "Фигурка акриловая Люмин";
             // 
             // labelSucrose
             // 
@@ -222,27 +199,117 @@ namespace FormMain
             this.labelSucrose.TabIndex = 1;
             this.labelSucrose.Text = "Фигурка акриловая Сахароза";
             // 
-            // labelLumine
+            // labelDiluc
             // 
-            this.labelLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelLumine.AutoSize = true;
-            this.labelLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLumine.Location = new System.Drawing.Point(271, 226);
-            this.labelLumine.Name = "labelLumine";
-            this.labelLumine.Size = new System.Drawing.Size(342, 30);
-            this.labelLumine.TabIndex = 1;
-            this.labelLumine.Text = "Фигурка акриловая Люмин";
+            this.labelDiluc.AutoSize = true;
+            this.labelDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDiluc.Location = new System.Drawing.Point(277, 7);
+            this.labelDiluc.Name = "labelDiluc";
+            this.labelDiluc.Size = new System.Drawing.Size(333, 30);
+            this.labelDiluc.TabIndex = 1;
+            this.labelDiluc.Text = "Фигурка акриловая Дилюк";
             // 
-            // labelSinSue
+            // pictureBoxSinSue
             // 
-            this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSinSue.AutoSize = true;
-            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSinSue.Location = new System.Drawing.Point(773, 226);
-            this.labelSinSue.Name = "labelSinSue";
-            this.labelSinSue.Size = new System.Drawing.Size(351, 30);
-            this.labelSinSue.TabIndex = 1;
-            this.labelSinSue.Text = "Фигурка акриловая Син Сю";
+            this.pictureBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSinSue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSinSue.Image")));
+            this.pictureBoxSinSue.Location = new System.Drawing.Point(505, 224);
+            this.pictureBoxSinSue.Name = "pictureBoxSinSue";
+            this.pictureBoxSinSue.Size = new System.Drawing.Size(285, 223);
+            this.pictureBoxSinSue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSinSue.TabIndex = 0;
+            this.pictureBoxSinSue.TabStop = false;
+            // 
+            // pictureBoxLumine
+            // 
+            this.pictureBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxLumine.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLumine.Image")));
+            this.pictureBoxLumine.Location = new System.Drawing.Point(4, 226);
+            this.pictureBoxLumine.Name = "pictureBoxLumine";
+            this.pictureBoxLumine.Size = new System.Drawing.Size(285, 221);
+            this.pictureBoxLumine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLumine.TabIndex = 0;
+            this.pictureBoxLumine.TabStop = false;
+            // 
+            // pictureBoxSucrose
+            // 
+            this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSucrose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSucrose.Image")));
+            this.pictureBoxSucrose.Location = new System.Drawing.Point(505, 3);
+            this.pictureBoxSucrose.Name = "pictureBoxSucrose";
+            this.pictureBoxSucrose.Size = new System.Drawing.Size(285, 215);
+            this.pictureBoxSucrose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSucrose.TabIndex = 0;
+            this.pictureBoxSucrose.TabStop = false;
+            // 
+            // pictureBoxDiluc
+            // 
+            this.pictureBoxDiluc.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiluc.Image")));
+            this.pictureBoxDiluc.Location = new System.Drawing.Point(4, 7);
+            this.pictureBoxDiluc.Name = "pictureBoxDiluc";
+            this.pictureBoxDiluc.Size = new System.Drawing.Size(285, 211);
+            this.pictureBoxDiluc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDiluc.TabIndex = 0;
+            this.pictureBoxDiluc.TabStop = false;
+            // 
+            // textBoxDiluc
+            // 
+            this.textBoxDiluc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxDiluc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDiluc.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDiluc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxDiluc.Location = new System.Drawing.Point(282, 41);
+            this.textBoxDiluc.Multiline = true;
+            this.textBoxDiluc.Name = "textBoxDiluc";
+            this.textBoxDiluc.ReadOnly = true;
+            this.textBoxDiluc.Size = new System.Drawing.Size(100, 177);
+            this.textBoxDiluc.TabIndex = 2;
+            this.textBoxDiluc.Text = "Цена: \r\n1.600 руб.\r\n";
+            // 
+            // textBoxSucrose
+            // 
+            this.textBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSucrose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSucrose.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSucrose.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSucrose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSucrose.Location = new System.Drawing.Point(764, 41);
+            this.textBoxSucrose.Multiline = true;
+            this.textBoxSucrose.Name = "textBoxSucrose";
+            this.textBoxSucrose.ReadOnly = true;
+            this.textBoxSucrose.Size = new System.Drawing.Size(100, 177);
+            this.textBoxSucrose.TabIndex = 2;
+            this.textBoxSucrose.Text = "Цена: \r\n1.600 руб.\r\n";
+            // 
+            // textBoxLumine
+            // 
+            this.textBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxLumine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxLumine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLumine.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLumine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxLumine.Location = new System.Drawing.Point(282, 270);
+            this.textBoxLumine.Multiline = true;
+            this.textBoxLumine.Name = "textBoxLumine";
+            this.textBoxLumine.ReadOnly = true;
+            this.textBoxLumine.Size = new System.Drawing.Size(100, 177);
+            this.textBoxLumine.TabIndex = 2;
+            this.textBoxLumine.Text = "Цена: \r\n1.800 руб.\r\n";
+            // 
+            // textBoxSinSue
+            // 
+            this.textBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSinSue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSinSue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinSue.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSinSue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSinSue.Location = new System.Drawing.Point(764, 270);
+            this.textBoxSinSue.Multiline = true;
+            this.textBoxSinSue.Name = "textBoxSinSue";
+            this.textBoxSinSue.ReadOnly = true;
+            this.textBoxSinSue.Size = new System.Drawing.Size(100, 177);
+            this.textBoxSinSue.TabIndex = 2;
+            this.textBoxSinSue.Text = "Цена: \r\n1.600 руб.\r\n";
             // 
             // FormTovarLook
             // 
@@ -263,10 +330,10 @@ namespace FormMain
             this.panelForButtons.ResumeLayout(false);
             this.panelTovars.ResumeLayout(false);
             this.panelTovars.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,5 +356,9 @@ namespace FormMain
         private System.Windows.Forms.Label labelLumine;
         private System.Windows.Forms.Label labelSucrose;
         private System.Windows.Forms.Label labelDiluc;
+        private System.Windows.Forms.TextBox textBoxSinSue;
+        private System.Windows.Forms.TextBox textBoxLumine;
+        private System.Windows.Forms.TextBox textBoxSucrose;
+        private System.Windows.Forms.TextBox textBoxDiluc;
     }
 }
