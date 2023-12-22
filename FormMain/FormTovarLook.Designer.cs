@@ -29,27 +29,37 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelUp = new System.Windows.Forms.Panel();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelAssortiment = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelTovars = new System.Windows.Forms.Panel();
+            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSinsue = new System.Windows.Forms.PictureBox();
+            this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
+            this.panelTovars.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinsue)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelUp
             // 
-            this.panel1.Controls.Add(this.panelForButtons);
-            this.panel1.Controls.Add(this.buttonHome);
-            this.panel1.Controls.Add(this.labelAssortiment);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 135);
-            this.panel1.TabIndex = 0;
+            this.panelUp.Controls.Add(this.panelForButtons);
+            this.panelUp.Controls.Add(this.buttonHome);
+            this.panelUp.Controls.Add(this.labelAssortiment);
+            this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUp.Location = new System.Drawing.Point(0, 0);
+            this.panelUp.Name = "panelUp";
+            this.panelUp.Size = new System.Drawing.Size(1028, 135);
+            this.panelUp.TabIndex = 0;
             // 
             // panelForButtons
             // 
@@ -62,6 +72,7 @@ namespace FormMain
             this.panelForButtons.Name = "panelForButtons";
             this.panelForButtons.Size = new System.Drawing.Size(1028, 45);
             this.panelForButtons.TabIndex = 3;
+            this.panelForButtons.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelForButtons_MouseDown);
             // 
             // buttonMinimize
             // 
@@ -126,35 +137,92 @@ namespace FormMain
             this.labelAssortiment.Text = "Товары В Наличии";
             this.labelAssortiment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelTovars
+            // 
+            this.panelTovars.Controls.Add(this.pictureBoxSucrose);
+            this.panelTovars.Controls.Add(this.pictureBoxSinsue);
+            this.panelTovars.Controls.Add(this.pictureBoxLumine);
+            this.panelTovars.Controls.Add(this.pictureBoxDiluc);
+            this.panelTovars.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTovars.Location = new System.Drawing.Point(0, 135);
+            this.panelTovars.Name = "panelTovars";
+            this.panelTovars.Size = new System.Drawing.Size(1028, 459);
+            this.panelTovars.TabIndex = 1;
+            // 
+            // pictureBoxSucrose
+            // 
+            this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSucrose.Location = new System.Drawing.Point(494, 3);
+            this.pictureBoxSucrose.Name = "pictureBoxSucrose";
+            this.pictureBoxSucrose.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxSucrose.TabIndex = 0;
+            this.pictureBoxSucrose.TabStop = false;
+            // 
+            // pictureBoxDiluc
+            // 
+            this.pictureBoxDiluc.Location = new System.Drawing.Point(0, 3);
+            this.pictureBoxDiluc.Name = "pictureBoxDiluc";
+            this.pictureBoxDiluc.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxDiluc.TabIndex = 0;
+            this.pictureBoxDiluc.TabStop = false;
+            // 
+            // pictureBoxLumine
+            // 
+            this.pictureBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBoxLumine.Location = new System.Drawing.Point(0, 235);
+            this.pictureBoxLumine.Name = "pictureBoxLumine";
+            this.pictureBoxLumine.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxLumine.TabIndex = 0;
+            this.pictureBoxLumine.TabStop = false;
+            // 
+            // pictureBoxSinsue
+            // 
+            this.pictureBoxSinsue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSinsue.Location = new System.Drawing.Point(494, 235);
+            this.pictureBoxSinsue.Name = "pictureBoxSinsue";
+            this.pictureBoxSinsue.Size = new System.Drawing.Size(334, 221);
+            this.pictureBoxSinsue.TabIndex = 0;
+            this.pictureBoxSinsue.TabStop = false;
+            // 
             // FormTovarLook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 594);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTovars);
+            this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1000, 460);
+            this.MinimumSize = new System.Drawing.Size(900, 630);
             this.Name = "FormTovarLook";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelUp.ResumeLayout(false);
+            this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
+            this.panelTovars.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinsue)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelUp;
         private System.Windows.Forms.Label labelAssortiment;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Panel panelForButtons;
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Panel panelTovars;
+        private System.Windows.Forms.PictureBox pictureBoxSucrose;
+        private System.Windows.Forms.PictureBox pictureBoxDiluc;
+        private System.Windows.Forms.PictureBox pictureBoxSinsue;
+        private System.Windows.Forms.PictureBox pictureBoxLumine;
     }
 }

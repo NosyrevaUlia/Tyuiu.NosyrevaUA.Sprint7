@@ -16,6 +16,8 @@ namespace FormMain
         public FormNewComing()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
 
         //-----------------------------------------------------------------------------------------------

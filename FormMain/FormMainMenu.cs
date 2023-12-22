@@ -14,11 +14,11 @@ namespace FormMain
 {
     public partial class FormMainMenu : Form
     {
-        //private Form active;
-
         public FormMainMenu()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
         }
         //---------------------------------------------------------------------------------------------------
         //---------------------------------------------------------------------------------------------------    Двигать окно

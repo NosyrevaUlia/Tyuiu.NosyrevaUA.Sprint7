@@ -137,7 +137,6 @@ namespace FormMain
             this.ClientSize = new System.Drawing.Size(1028, 594);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(1000, 460);
             this.Name = "FormNewComing";

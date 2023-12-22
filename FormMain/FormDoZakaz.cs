@@ -17,6 +17,8 @@ namespace FormMain
         public FormDoZakaz()
         {
             InitializeComponent();
+            this.ControlBox = false;
+            this.Text = string.Empty;
         }
 
         //-----------------------------------------------------------------------------------------------   Двигать окно

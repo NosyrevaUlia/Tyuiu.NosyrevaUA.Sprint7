@@ -314,6 +314,7 @@ namespace FormMain
             // 
             this.buttonDoZAKAZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDoZAKAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonDoZAKAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDoZAKAZ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDoZAKAZ.Location = new System.Drawing.Point(167, 363);
             this.buttonDoZAKAZ.Name = "buttonDoZAKAZ";
@@ -340,7 +341,6 @@ namespace FormMain
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1000, 460);
             this.Name = "FormDoZakaz";
             this.ShowIcon = false;
