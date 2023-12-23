@@ -31,6 +31,7 @@ namespace FormMain
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTovarLook));
             this.panelUp = new System.Windows.Forms.Panel();
+            this.buttonBucket = new System.Windows.Forms.Button();
             this.panelForButtons = new System.Windows.Forms.Panel();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
@@ -38,6 +39,26 @@ namespace FormMain
             this.buttonHome = new System.Windows.Forms.Button();
             this.labelAssortiment = new System.Windows.Forms.Label();
             this.panelTovars = new System.Windows.Forms.Panel();
+            this.textBoxSinSueKolichestvo = new System.Windows.Forms.TextBox();
+            this.textBoxLumineKolichestvo = new System.Windows.Forms.TextBox();
+            this.textBoxSucroseKolichestvo = new System.Windows.Forms.TextBox();
+            this.textBoxDilucKolichestvo = new System.Windows.Forms.TextBox();
+            this.labelSinSueInBucked = new System.Windows.Forms.Label();
+            this.labelLumineInBucked = new System.Windows.Forms.Label();
+            this.labelSucroseInBucked = new System.Windows.Forms.Label();
+            this.labelDilucInBucked = new System.Windows.Forms.Label();
+            this.textBoxSinSueCost = new System.Windows.Forms.TextBox();
+            this.textBoxLumineCost = new System.Windows.Forms.TextBox();
+            this.textBoxSucroseCost = new System.Windows.Forms.TextBox();
+            this.textBoxDilucCost = new System.Windows.Forms.TextBox();
+            this.buttonSinSueToBucket = new System.Windows.Forms.Button();
+            this.buttonLumineToBucket = new System.Windows.Forms.Button();
+            this.buttonSucroseToBucket = new System.Windows.Forms.Button();
+            this.buttonDilucToBucket = new System.Windows.Forms.Button();
+            this.textBoxSinSue = new System.Windows.Forms.TextBox();
+            this.textBoxLumine = new System.Windows.Forms.TextBox();
+            this.textBoxSucrose = new System.Windows.Forms.TextBox();
+            this.textBoxDiluc = new System.Windows.Forms.TextBox();
             this.labelSinSue = new System.Windows.Forms.Label();
             this.labelLumine = new System.Windows.Forms.Label();
             this.labelSucrose = new System.Windows.Forms.Label();
@@ -46,10 +67,8 @@ namespace FormMain
             this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
             this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
-            this.textBoxDiluc = new System.Windows.Forms.TextBox();
-            this.textBoxSucrose = new System.Windows.Forms.TextBox();
-            this.textBoxLumine = new System.Windows.Forms.TextBox();
-            this.textBoxSinSue = new System.Windows.Forms.TextBox();
+            this.textBoxBucked = new System.Windows.Forms.TextBox();
+            this.labelYourBucked = new System.Windows.Forms.Label();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelTovars.SuspendLayout();
@@ -61,6 +80,8 @@ namespace FormMain
             // 
             // panelUp
             // 
+            this.panelUp.Controls.Add(this.labelYourBucked);
+            this.panelUp.Controls.Add(this.buttonBucket);
             this.panelUp.Controls.Add(this.panelForButtons);
             this.panelUp.Controls.Add(this.buttonHome);
             this.panelUp.Controls.Add(this.labelAssortiment);
@@ -69,6 +90,16 @@ namespace FormMain
             this.panelUp.Name = "panelUp";
             this.panelUp.Size = new System.Drawing.Size(1028, 135);
             this.panelUp.TabIndex = 0;
+            // 
+            // buttonBucket
+            // 
+            this.buttonBucket.Location = new System.Drawing.Point(902, 59);
+            this.buttonBucket.Name = "buttonBucket";
+            this.buttonBucket.Size = new System.Drawing.Size(117, 70);
+            this.buttonBucket.TabIndex = 4;
+            this.buttonBucket.Text = "Корзина";
+            this.buttonBucket.UseVisualStyleBackColor = true;
+            this.buttonBucket.Click += new System.EventHandler(this.buttonBucket_Click);
             // 
             // panelForButtons
             // 
@@ -148,6 +179,23 @@ namespace FormMain
             // 
             // panelTovars
             // 
+            this.panelTovars.Controls.Add(this.textBoxBucked);
+            this.panelTovars.Controls.Add(this.textBoxSinSueKolichestvo);
+            this.panelTovars.Controls.Add(this.textBoxLumineKolichestvo);
+            this.panelTovars.Controls.Add(this.textBoxSucroseKolichestvo);
+            this.panelTovars.Controls.Add(this.textBoxDilucKolichestvo);
+            this.panelTovars.Controls.Add(this.labelSinSueInBucked);
+            this.panelTovars.Controls.Add(this.labelLumineInBucked);
+            this.panelTovars.Controls.Add(this.labelSucroseInBucked);
+            this.panelTovars.Controls.Add(this.labelDilucInBucked);
+            this.panelTovars.Controls.Add(this.textBoxSinSueCost);
+            this.panelTovars.Controls.Add(this.textBoxLumineCost);
+            this.panelTovars.Controls.Add(this.textBoxSucroseCost);
+            this.panelTovars.Controls.Add(this.textBoxDilucCost);
+            this.panelTovars.Controls.Add(this.buttonSinSueToBucket);
+            this.panelTovars.Controls.Add(this.buttonLumineToBucket);
+            this.panelTovars.Controls.Add(this.buttonSucroseToBucket);
+            this.panelTovars.Controls.Add(this.buttonDilucToBucket);
             this.panelTovars.Controls.Add(this.textBoxSinSue);
             this.panelTovars.Controls.Add(this.textBoxLumine);
             this.panelTovars.Controls.Add(this.textBoxSucrose);
@@ -166,14 +214,269 @@ namespace FormMain
             this.panelTovars.Size = new System.Drawing.Size(1028, 459);
             this.panelTovars.TabIndex = 1;
             // 
+            // textBoxSinSueKolichestvo
+            // 
+            this.textBoxSinSueKolichestvo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSinSueKolichestvo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSinSueKolichestvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinSueKolichestvo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSinSueKolichestvo.Location = new System.Drawing.Point(851, 345);
+            this.textBoxSinSueKolichestvo.Name = "textBoxSinSueKolichestvo";
+            this.textBoxSinSueKolichestvo.ReadOnly = true;
+            this.textBoxSinSueKolichestvo.Size = new System.Drawing.Size(73, 20);
+            this.textBoxSinSueKolichestvo.TabIndex = 6;
+            // 
+            // textBoxLumineKolichestvo
+            // 
+            this.textBoxLumineKolichestvo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxLumineKolichestvo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxLumineKolichestvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLumineKolichestvo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxLumineKolichestvo.Location = new System.Drawing.Point(342, 344);
+            this.textBoxLumineKolichestvo.Name = "textBoxLumineKolichestvo";
+            this.textBoxLumineKolichestvo.ReadOnly = true;
+            this.textBoxLumineKolichestvo.Size = new System.Drawing.Size(73, 20);
+            this.textBoxLumineKolichestvo.TabIndex = 6;
+            // 
+            // textBoxSucroseKolichestvo
+            // 
+            this.textBoxSucroseKolichestvo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSucroseKolichestvo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSucroseKolichestvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSucroseKolichestvo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSucroseKolichestvo.Location = new System.Drawing.Point(851, 123);
+            this.textBoxSucroseKolichestvo.Name = "textBoxSucroseKolichestvo";
+            this.textBoxSucroseKolichestvo.ReadOnly = true;
+            this.textBoxSucroseKolichestvo.Size = new System.Drawing.Size(73, 20);
+            this.textBoxSucroseKolichestvo.TabIndex = 6;
+            // 
+            // textBoxDilucKolichestvo
+            // 
+            this.textBoxDilucKolichestvo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxDilucKolichestvo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDilucKolichestvo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxDilucKolichestvo.Location = new System.Drawing.Point(342, 126);
+            this.textBoxDilucKolichestvo.Name = "textBoxDilucKolichestvo";
+            this.textBoxDilucKolichestvo.ReadOnly = true;
+            this.textBoxDilucKolichestvo.Size = new System.Drawing.Size(73, 20);
+            this.textBoxDilucKolichestvo.TabIndex = 6;
+            // 
+            // labelSinSueInBucked
+            // 
+            this.labelSinSueInBucked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSinSueInBucked.AutoSize = true;
+            this.labelSinSueInBucked.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSinSueInBucked.Location = new System.Drawing.Point(729, 342);
+            this.labelSinSueInBucked.Name = "labelSinSueInBucked";
+            this.labelSinSueInBucked.Size = new System.Drawing.Size(116, 23);
+            this.labelSinSueInBucked.TabIndex = 5;
+            this.labelSinSueInBucked.Text = "В Корзине:";
+            // 
+            // labelLumineInBucked
+            // 
+            this.labelLumineInBucked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelLumineInBucked.AutoSize = true;
+            this.labelLumineInBucked.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLumineInBucked.Location = new System.Drawing.Point(220, 342);
+            this.labelLumineInBucked.Name = "labelLumineInBucked";
+            this.labelLumineInBucked.Size = new System.Drawing.Size(116, 23);
+            this.labelLumineInBucked.TabIndex = 5;
+            this.labelLumineInBucked.Text = "В Корзине:";
+            // 
+            // labelSucroseInBucked
+            // 
+            this.labelSucroseInBucked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSucroseInBucked.AutoSize = true;
+            this.labelSucroseInBucked.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSucroseInBucked.Location = new System.Drawing.Point(729, 123);
+            this.labelSucroseInBucked.Name = "labelSucroseInBucked";
+            this.labelSucroseInBucked.Size = new System.Drawing.Size(116, 23);
+            this.labelSucroseInBucked.TabIndex = 5;
+            this.labelSucroseInBucked.Text = "В Корзине:";
+            // 
+            // labelDilucInBucked
+            // 
+            this.labelDilucInBucked.AutoSize = true;
+            this.labelDilucInBucked.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDilucInBucked.Location = new System.Drawing.Point(220, 123);
+            this.labelDilucInBucked.Name = "labelDilucInBucked";
+            this.labelDilucInBucked.Size = new System.Drawing.Size(116, 23);
+            this.labelDilucInBucked.TabIndex = 5;
+            this.labelDilucInBucked.Text = "В Корзине:";
+            // 
+            // textBoxSinSueCost
+            // 
+            this.textBoxSinSueCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSinSueCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSinSueCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinSueCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSinSueCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSinSueCost.Location = new System.Drawing.Point(863, 261);
+            this.textBoxSinSueCost.Name = "textBoxSinSueCost";
+            this.textBoxSinSueCost.ReadOnly = true;
+            this.textBoxSinSueCost.Size = new System.Drawing.Size(100, 30);
+            this.textBoxSinSueCost.TabIndex = 4;
+            this.textBoxSinSueCost.Text = "1600";
+            // 
+            // textBoxLumineCost
+            // 
+            this.textBoxLumineCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxLumineCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxLumineCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLumineCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLumineCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxLumineCost.Location = new System.Drawing.Point(362, 261);
+            this.textBoxLumineCost.Name = "textBoxLumineCost";
+            this.textBoxLumineCost.ReadOnly = true;
+            this.textBoxLumineCost.Size = new System.Drawing.Size(100, 30);
+            this.textBoxLumineCost.TabIndex = 4;
+            this.textBoxLumineCost.Text = "1800";
+            // 
+            // textBoxSucroseCost
+            // 
+            this.textBoxSucroseCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSucroseCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSucroseCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSucroseCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSucroseCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSucroseCost.Location = new System.Drawing.Point(863, 41);
+            this.textBoxSucroseCost.Name = "textBoxSucroseCost";
+            this.textBoxSucroseCost.ReadOnly = true;
+            this.textBoxSucroseCost.Size = new System.Drawing.Size(100, 30);
+            this.textBoxSucroseCost.TabIndex = 4;
+            this.textBoxSucroseCost.Text = "1600";
+            // 
+            // textBoxDilucCost
+            // 
+            this.textBoxDilucCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxDilucCost.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDilucCost.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDilucCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxDilucCost.Location = new System.Drawing.Point(362, 41);
+            this.textBoxDilucCost.Name = "textBoxDilucCost";
+            this.textBoxDilucCost.ReadOnly = true;
+            this.textBoxDilucCost.Size = new System.Drawing.Size(100, 30);
+            this.textBoxDilucCost.TabIndex = 4;
+            this.textBoxDilucCost.Text = "1600";
+            // 
+            // buttonSinSueToBucket
+            // 
+            this.buttonSinSueToBucket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSinSueToBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSinSueToBucket.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSinSueToBucket.Location = new System.Drawing.Point(723, 302);
+            this.buttonSinSueToBucket.Name = "buttonSinSueToBucket";
+            this.buttonSinSueToBucket.Size = new System.Drawing.Size(147, 37);
+            this.buttonSinSueToBucket.TabIndex = 3;
+            this.buttonSinSueToBucket.Text = "В Корзину";
+            this.buttonSinSueToBucket.UseVisualStyleBackColor = false;
+            this.buttonSinSueToBucket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonSinSueToBucket_MouseClick);
+            // 
+            // buttonLumineToBucket
+            // 
+            this.buttonLumineToBucket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonLumineToBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonLumineToBucket.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonLumineToBucket.Location = new System.Drawing.Point(224, 302);
+            this.buttonLumineToBucket.Name = "buttonLumineToBucket";
+            this.buttonLumineToBucket.Size = new System.Drawing.Size(147, 37);
+            this.buttonLumineToBucket.TabIndex = 3;
+            this.buttonLumineToBucket.Text = "В Корзину";
+            this.buttonLumineToBucket.UseVisualStyleBackColor = false;
+            this.buttonLumineToBucket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonLumineToBucket_MouseClick);
+            // 
+            // buttonSucroseToBucket
+            // 
+            this.buttonSucroseToBucket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSucroseToBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSucroseToBucket.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSucroseToBucket.Location = new System.Drawing.Point(723, 83);
+            this.buttonSucroseToBucket.Name = "buttonSucroseToBucket";
+            this.buttonSucroseToBucket.Size = new System.Drawing.Size(147, 37);
+            this.buttonSucroseToBucket.TabIndex = 3;
+            this.buttonSucroseToBucket.Text = "В Корзину";
+            this.buttonSucroseToBucket.UseVisualStyleBackColor = false;
+            this.buttonSucroseToBucket.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonSucroseToBucket_MouseClick);
+            // 
+            // buttonDilucToBucket
+            // 
+            this.buttonDilucToBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonDilucToBucket.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDilucToBucket.Location = new System.Drawing.Point(224, 83);
+            this.buttonDilucToBucket.Name = "buttonDilucToBucket";
+            this.buttonDilucToBucket.Size = new System.Drawing.Size(147, 37);
+            this.buttonDilucToBucket.TabIndex = 3;
+            this.buttonDilucToBucket.Text = "В Корзину";
+            this.buttonDilucToBucket.UseVisualStyleBackColor = false;
+            this.buttonDilucToBucket.Click += new System.EventHandler(this.buttonDilucToBucket_Click);
+            // 
+            // textBoxSinSue
+            // 
+            this.textBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSinSue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSinSue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSinSue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSinSue.Location = new System.Drawing.Point(723, 261);
+            this.textBoxSinSue.Multiline = true;
+            this.textBoxSinSue.Name = "textBoxSinSue";
+            this.textBoxSinSue.ReadOnly = true;
+            this.textBoxSinSue.Size = new System.Drawing.Size(173, 177);
+            this.textBoxSinSue.TabIndex = 2;
+            this.textBoxSinSue.Text = "Цена, руб.:";
+            // 
+            // textBoxLumine
+            // 
+            this.textBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxLumine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxLumine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLumine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxLumine.Location = new System.Drawing.Point(224, 261);
+            this.textBoxLumine.Multiline = true;
+            this.textBoxLumine.Name = "textBoxLumine";
+            this.textBoxLumine.ReadOnly = true;
+            this.textBoxLumine.Size = new System.Drawing.Size(171, 177);
+            this.textBoxLumine.TabIndex = 2;
+            this.textBoxLumine.Text = "Цена, руб.: ";
+            // 
+            // textBoxSucrose
+            // 
+            this.textBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSucrose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSucrose.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSucrose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSucrose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSucrose.Location = new System.Drawing.Point(723, 41);
+            this.textBoxSucrose.Multiline = true;
+            this.textBoxSucrose.Name = "textBoxSucrose";
+            this.textBoxSucrose.ReadOnly = true;
+            this.textBoxSucrose.Size = new System.Drawing.Size(173, 177);
+            this.textBoxSucrose.TabIndex = 2;
+            this.textBoxSucrose.Text = "Цена, руб.:";
+            // 
+            // textBoxDiluc
+            // 
+            this.textBoxDiluc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxDiluc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDiluc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxDiluc.Location = new System.Drawing.Point(224, 41);
+            this.textBoxDiluc.Multiline = true;
+            this.textBoxDiluc.Name = "textBoxDiluc";
+            this.textBoxDiluc.ReadOnly = true;
+            this.textBoxDiluc.Size = new System.Drawing.Size(171, 177);
+            this.textBoxDiluc.TabIndex = 2;
+            this.textBoxDiluc.Text = "Цена, руб.: ";
+            // 
             // labelSinSue
             // 
             this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSinSue.AutoSize = true;
-            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSinSue.Location = new System.Drawing.Point(759, 221);
+            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSinSue.Location = new System.Drawing.Point(717, 226);
             this.labelSinSue.Name = "labelSinSue";
-            this.labelSinSue.Size = new System.Drawing.Size(351, 30);
+            this.labelSinSue.Size = new System.Drawing.Size(407, 34);
             this.labelSinSue.TabIndex = 1;
             this.labelSinSue.Text = "Фигурка акриловая Син Сю";
             // 
@@ -181,10 +484,10 @@ namespace FormMain
             // 
             this.labelLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelLumine.AutoSize = true;
-            this.labelLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelLumine.Location = new System.Drawing.Point(277, 224);
+            this.labelLumine.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLumine.Location = new System.Drawing.Point(218, 224);
             this.labelLumine.Name = "labelLumine";
-            this.labelLumine.Size = new System.Drawing.Size(342, 30);
+            this.labelLumine.Size = new System.Drawing.Size(398, 34);
             this.labelLumine.TabIndex = 1;
             this.labelLumine.Text = "Фигурка акриловая Люмин";
             // 
@@ -192,20 +495,20 @@ namespace FormMain
             // 
             this.labelSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSucrose.AutoSize = true;
-            this.labelSucrose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSucrose.Location = new System.Drawing.Point(759, 3);
+            this.labelSucrose.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSucrose.Location = new System.Drawing.Point(717, 7);
             this.labelSucrose.Name = "labelSucrose";
-            this.labelSucrose.Size = new System.Drawing.Size(377, 30);
+            this.labelSucrose.Size = new System.Drawing.Size(438, 34);
             this.labelSucrose.TabIndex = 1;
             this.labelSucrose.Text = "Фигурка акриловая Сахароза";
             // 
             // labelDiluc
             // 
             this.labelDiluc.AutoSize = true;
-            this.labelDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDiluc.Location = new System.Drawing.Point(277, 7);
+            this.labelDiluc.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDiluc.Location = new System.Drawing.Point(218, 7);
             this.labelDiluc.Name = "labelDiluc";
-            this.labelDiluc.Size = new System.Drawing.Size(333, 30);
+            this.labelDiluc.Size = new System.Drawing.Size(387, 34);
             this.labelDiluc.TabIndex = 1;
             this.labelDiluc.Text = "Фигурка акриловая Дилюк";
             // 
@@ -252,64 +555,29 @@ namespace FormMain
             this.pictureBoxDiluc.TabIndex = 0;
             this.pictureBoxDiluc.TabStop = false;
             // 
-            // textBoxDiluc
+            // textBoxBucked
             // 
-            this.textBoxDiluc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxDiluc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDiluc.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDiluc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxDiluc.Location = new System.Drawing.Point(282, 41);
-            this.textBoxDiluc.Multiline = true;
-            this.textBoxDiluc.Name = "textBoxDiluc";
-            this.textBoxDiluc.ReadOnly = true;
-            this.textBoxDiluc.Size = new System.Drawing.Size(100, 177);
-            this.textBoxDiluc.TabIndex = 2;
-            this.textBoxDiluc.Text = "Цена: \r\n1.600 руб.\r\n";
+            this.textBoxBucked.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxBucked.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBucked.Location = new System.Drawing.Point(0, 0);
+            this.textBoxBucked.Multiline = true;
+            this.textBoxBucked.Name = "textBoxBucked";
+            this.textBoxBucked.ReadOnly = true;
+            this.textBoxBucked.Size = new System.Drawing.Size(1028, 459);
+            this.textBoxBucked.TabIndex = 7;
+            this.textBoxBucked.Visible = false;
             // 
-            // textBoxSucrose
+            // labelYourBucked
             // 
-            this.textBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSucrose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxSucrose.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSucrose.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSucrose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxSucrose.Location = new System.Drawing.Point(764, 41);
-            this.textBoxSucrose.Multiline = true;
-            this.textBoxSucrose.Name = "textBoxSucrose";
-            this.textBoxSucrose.ReadOnly = true;
-            this.textBoxSucrose.Size = new System.Drawing.Size(100, 177);
-            this.textBoxSucrose.TabIndex = 2;
-            this.textBoxSucrose.Text = "Цена: \r\n1.600 руб.\r\n";
-            // 
-            // textBoxLumine
-            // 
-            this.textBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxLumine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxLumine.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLumine.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLumine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxLumine.Location = new System.Drawing.Point(282, 270);
-            this.textBoxLumine.Multiline = true;
-            this.textBoxLumine.Name = "textBoxLumine";
-            this.textBoxLumine.ReadOnly = true;
-            this.textBoxLumine.Size = new System.Drawing.Size(100, 177);
-            this.textBoxLumine.TabIndex = 2;
-            this.textBoxLumine.Text = "Цена: \r\n1.800 руб.\r\n";
-            // 
-            // textBoxSinSue
-            // 
-            this.textBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSinSue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxSinSue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSinSue.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSinSue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxSinSue.Location = new System.Drawing.Point(764, 270);
-            this.textBoxSinSue.Multiline = true;
-            this.textBoxSinSue.Name = "textBoxSinSue";
-            this.textBoxSinSue.ReadOnly = true;
-            this.textBoxSinSue.Size = new System.Drawing.Size(100, 177);
-            this.textBoxSinSue.TabIndex = 2;
-            this.textBoxSinSue.Text = "Цена: \r\n1.600 руб.\r\n";
+            this.labelYourBucked.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelYourBucked.AutoSize = true;
+            this.labelYourBucked.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelYourBucked.Location = new System.Drawing.Point(388, 59);
+            this.labelYourBucked.Name = "labelYourBucked";
+            this.labelYourBucked.Size = new System.Drawing.Size(350, 55);
+            this.labelYourBucked.TabIndex = 5;
+            this.labelYourBucked.Text = "Ваша Корзина";
+            this.labelYourBucked.Visible = false;
             // 
             // FormTovarLook
             // 
@@ -360,5 +628,24 @@ namespace FormMain
         private System.Windows.Forms.TextBox textBoxLumine;
         private System.Windows.Forms.TextBox textBoxSucrose;
         private System.Windows.Forms.TextBox textBoxDiluc;
+        private System.Windows.Forms.Button buttonSinSueToBucket;
+        private System.Windows.Forms.Button buttonLumineToBucket;
+        private System.Windows.Forms.Button buttonSucroseToBucket;
+        private System.Windows.Forms.Button buttonDilucToBucket;
+        private System.Windows.Forms.TextBox textBoxDilucCost;
+        private System.Windows.Forms.TextBox textBoxSinSueCost;
+        private System.Windows.Forms.TextBox textBoxLumineCost;
+        private System.Windows.Forms.TextBox textBoxSucroseCost;
+        private System.Windows.Forms.Button buttonBucket;
+        private System.Windows.Forms.Label labelSinSueInBucked;
+        private System.Windows.Forms.Label labelLumineInBucked;
+        private System.Windows.Forms.Label labelSucroseInBucked;
+        private System.Windows.Forms.Label labelDilucInBucked;
+        private System.Windows.Forms.TextBox textBoxSinSueKolichestvo;
+        private System.Windows.Forms.TextBox textBoxLumineKolichestvo;
+        private System.Windows.Forms.TextBox textBoxSucroseKolichestvo;
+        private System.Windows.Forms.TextBox textBoxDilucKolichestvo;
+        private System.Windows.Forms.Label labelYourBucked;
+        private System.Windows.Forms.TextBox textBoxBucked;
     }
 }

@@ -51,10 +51,10 @@ namespace FormMain
             this.textBoxYourNameFirstPlease = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
+            this.buttonBucket = new System.Windows.Forms.Button();
+            this.buttonDobavitTorars = new System.Windows.Forms.Button();
             this.buttonDoZAKAZ = new System.Windows.Forms.Button();
             this.splitterLeftRight = new System.Windows.Forms.Splitter();
-            this.buttonDobavitTorars = new System.Windows.Forms.Button();
-            this.buttonBucket = new System.Windows.Forms.Button();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -314,6 +314,29 @@ namespace FormMain
             this.panelRight.Size = new System.Drawing.Size(440, 459);
             this.panelRight.TabIndex = 3;
             // 
+            // buttonBucket
+            // 
+            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBucket.Location = new System.Drawing.Point(314, 117);
+            this.buttonBucket.Name = "buttonBucket";
+            this.buttonBucket.Size = new System.Drawing.Size(114, 80);
+            this.buttonBucket.TabIndex = 3;
+            this.buttonBucket.UseVisualStyleBackColor = false;
+            // 
+            // buttonDobavitTorars
+            // 
+            this.buttonDobavitTorars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonDobavitTorars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDobavitTorars.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDobavitTorars.Location = new System.Drawing.Point(49, 17);
+            this.buttonDobavitTorars.Name = "buttonDobavitTorars";
+            this.buttonDobavitTorars.Size = new System.Drawing.Size(379, 84);
+            this.buttonDobavitTorars.TabIndex = 2;
+            this.buttonDobavitTorars.Text = "Добавить Товары";
+            this.buttonDobavitTorars.UseVisualStyleBackColor = false;
+            this.buttonDobavitTorars.Click += new System.EventHandler(this.buttonDobavitTorars_Click);
+            // 
             // buttonDoZAKAZ
             // 
             this.buttonDoZAKAZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -335,28 +358,6 @@ namespace FormMain
             this.splitterLeftRight.Size = new System.Drawing.Size(3, 459);
             this.splitterLeftRight.TabIndex = 0;
             this.splitterLeftRight.TabStop = false;
-            // 
-            // buttonDobavitTorars
-            // 
-            this.buttonDobavitTorars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonDobavitTorars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDobavitTorars.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDobavitTorars.Location = new System.Drawing.Point(49, 17);
-            this.buttonDobavitTorars.Name = "buttonDobavitTorars";
-            this.buttonDobavitTorars.Size = new System.Drawing.Size(379, 84);
-            this.buttonDobavitTorars.TabIndex = 2;
-            this.buttonDobavitTorars.Text = "Добавить Товары";
-            this.buttonDobavitTorars.UseVisualStyleBackColor = false;
-            // 
-            // buttonBucket
-            // 
-            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBucket.Location = new System.Drawing.Point(314, 117);
-            this.buttonBucket.Name = "buttonBucket";
-            this.buttonBucket.Size = new System.Drawing.Size(114, 80);
-            this.buttonBucket.TabIndex = 3;
-            this.buttonBucket.UseVisualStyleBackColor = false;
             // 
             // FormDoZakaz
             // 

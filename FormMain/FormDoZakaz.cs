@@ -37,12 +37,12 @@ namespace FormMain
         //-----------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------
 
-        private void buttonMinimize_Click(object sender, EventArgs e)             //Minimize But
+        private void buttonMinimize_Click(object sender, EventArgs e)             
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void buttonMaximize_Click(object sender, EventArgs e)             //Maximize But
+        private void buttonMaximize_Click(object sender, EventArgs e)             
         {
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; //Ограничение
             if (WindowState == FormWindowState.Normal)
@@ -52,12 +52,12 @@ namespace FormMain
             else { this.WindowState = FormWindowState.Normal; }
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)                //Close But
+        private void buttonClose_Click(object sender, EventArgs e)                
         {
             Application.Exit();
         } 
         
-        private void buttonHome_Click(object sender, EventArgs e)                 //Home But
+        private void buttonHome_Click(object sender, EventArgs e)                 
         {
             this.Hide();
             FormMainMenu Home = new FormMainMenu();
@@ -92,6 +92,13 @@ namespace FormMain
             }
             
             
+        }
+
+        private void buttonDobavitTorars_Click(object sender, EventArgs e)             //Попытка корзины
+        {
+            this.Hide();
+            FormTovarLook tovarLook = new FormTovarLook();
+            tovarLook.Show();
         }
     }
 }
