@@ -29,6 +29,7 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelUp = new System.Windows.Forms.Panel();
             this.labelmainMenu = new System.Windows.Forms.Label();
             this.panelForButtons = new System.Windows.Forms.Panel();
@@ -37,7 +38,6 @@ namespace FormMain
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonAboutUs = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.buttonMostPopular = new System.Windows.Forms.Button();
             this.buttonNewComing = new System.Windows.Forms.Button();
             this.panelCentre = new System.Windows.Forms.Panel();
             this.panelDown = new System.Windows.Forms.Panel();
@@ -91,6 +91,7 @@ namespace FormMain
             this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
             this.buttonMinimize.Location = new System.Drawing.Point(842, 12);
             this.buttonMinimize.Name = "buttonMinimize";
             this.buttonMinimize.Size = new System.Drawing.Size(54, 29);
@@ -103,6 +104,7 @@ namespace FormMain
             this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMaximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
             this.buttonMaximize.Location = new System.Drawing.Point(902, 12);
             this.buttonMaximize.Name = "buttonMaximize";
             this.buttonMaximize.Size = new System.Drawing.Size(54, 29);
@@ -115,6 +117,7 @@ namespace FormMain
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
             this.buttonClose.Location = new System.Drawing.Point(962, 12);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(54, 29);
@@ -137,7 +140,6 @@ namespace FormMain
             // 
             // panelLeft
             // 
-            this.panelLeft.Controls.Add(this.buttonMostPopular);
             this.panelLeft.Controls.Add(this.buttonNewComing);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 102);
@@ -145,24 +147,12 @@ namespace FormMain
             this.panelLeft.Size = new System.Drawing.Size(272, 492);
             this.panelLeft.TabIndex = 1;
             // 
-            // buttonMostPopular
-            // 
-            this.buttonMostPopular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonMostPopular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMostPopular.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonMostPopular.Location = new System.Drawing.Point(12, 216);
-            this.buttonMostPopular.Name = "buttonMostPopular";
-            this.buttonMostPopular.Size = new System.Drawing.Size(260, 94);
-            this.buttonMostPopular.TabIndex = 2;
-            this.buttonMostPopular.Text = "Самое Популярное";
-            this.buttonMostPopular.UseVisualStyleBackColor = false;
-            // 
             // buttonNewComing
             // 
             this.buttonNewComing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.buttonNewComing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewComing.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNewComing.Location = new System.Drawing.Point(12, 116);
+            this.buttonNewComing.Location = new System.Drawing.Point(12, 23);
             this.buttonNewComing.Name = "buttonNewComing";
             this.buttonNewComing.Size = new System.Drawing.Size(260, 94);
             this.buttonNewComing.TabIndex = 2;
@@ -221,9 +211,9 @@ namespace FormMain
             this.buttonDoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.buttonDoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDoDelivery.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDoDelivery.Location = new System.Drawing.Point(94, 189);
+            this.buttonDoDelivery.Location = new System.Drawing.Point(6, 189);
             this.buttonDoDelivery.Name = "buttonDoDelivery";
-            this.buttonDoDelivery.Size = new System.Drawing.Size(600, 120);
+            this.buttonDoDelivery.Size = new System.Drawing.Size(688, 120);
             this.buttonDoDelivery.TabIndex = 1;
             this.buttonDoDelivery.Text = "Сделать Заказ";
             this.buttonDoDelivery.UseVisualStyleBackColor = false;
@@ -262,7 +252,6 @@ namespace FormMain
         private System.Windows.Forms.Button buttonNewComing;
         private System.Windows.Forms.Button buttonDoDelivery;
         private System.Windows.Forms.Button buttonAboutUs;
-        private System.Windows.Forms.Button buttonMostPopular;
         private System.Windows.Forms.Panel panelDown;
         private System.Windows.Forms.Label labelChangeZakaz;
         private System.Windows.Forms.Button buttonCgangeZakaz;

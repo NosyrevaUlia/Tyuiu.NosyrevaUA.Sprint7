@@ -148,6 +148,9 @@ namespace FormMain
 
         private void buttonConfirmBuying_Click(object sender, EventArgs e)
         {
+            int Summa = Convert.ToInt32(textBoxDilucCost.Text) * Diluc + Convert.ToInt32(textBoxLumineCost.Text) * Lumine + Convert.ToInt32(textBoxSinSueCost.Text) * SinSue + Convert.ToInt32(textBoxSucroseCost.Text) * Sucrose;
+            if (Summa != 0)
+            { textBoxBucked.Text = DilucBucketText + Environment.NewLine + LumineBucketText + Environment.NewLine + SucroseBucketText + Environment.NewLine + SinSueBucketText + Environment.NewLine + Environment.NewLine + "Итого: " + Summa + " руб."; }
             try
             {
                 DialogResult dialogResult = MessageBox.Show("Обратите внимание! После перехода на следущую вкладку изменить список товаров будет нельзя. ", "Подтвердите выбор", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
