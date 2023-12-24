@@ -59,46 +59,58 @@ namespace FormMain
         
         private void buttonHome_Click(object sender, EventArgs e)                 
         {
-            this.Hide();
-            FormMainMenu Home = new FormMainMenu();
-            Home.Show();
+            DialogResult diares = MessageBox.Show("При переходе на главное меню все введённые данные не сохранятся. Вернуться в главное меню?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (diares == DialogResult.Yes)
+            {
+                this.Hide();
+                FormMainMenu Home = new FormMainMenu();
+                Home.Show();
+            }
         }
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
+        private void buttonBucket_Click(object sender, EventArgs e)
         {
-            int number = 0;
-            //Фамилия Имя Отчество Контакты Дата Адрес Номер
-            //string[] userData = { textBoxYourNameFirst.Text, textBoxYourNameSecond.Text, textBoxYourNameThird.Text, textBoxYourNumber.Text, textBoxDataDostavki.Text, textBoxAdress.Text};
+            textBoxBucked.Text = ClassDataNeeded.Text;
+            if (textBoxBucked.Visible == false)
+            {
+                buttonBucket.Text = "Назад";
+                textBoxBucked.Visible = true;
+            }
+            else
+            {
+                buttonBucket.Text = "Корзина";
+                textBoxBucked.Visible = false;
+            }
+        }
+        private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
+        {            
             if((textBoxYourNameFirst.Text) == "" || (textBoxYourNameSecond.Text=="") || (textBoxYourNameThird.Text=="") || (textBoxYourNumber.Text=="") || (textBoxDataDostavki.Text=="") || (textBoxAdress.Text == "")) { MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             else
             {
-                try
-                {   
-                    StringBuilder scv = new StringBuilder();
-
-                    string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
-                    number++;
-                    scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text +";"+number);
-                    File.AppendAllText(pathToSavescv, scv.ToString(), Encoding.GetEncoding(1251));
-
-                    DialogResult dialogres = MessageBox.Show("Заказ оформлен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
+                DialogResult diares = MessageBox.Show("Перед отправкой внимательно проверьте правильность введённых данных. Отправить заказ?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if(diares == DialogResult.Yes)
                 {
-                    MessageBox.Show("Сбой при сохранении данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+                        StringBuilder scv = new StringBuilder();
+
+                        string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
+
+                        scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text + ";");
+                        File.AppendAllText(pathToSavescv, scv.ToString(), Encoding.GetEncoding(1251));
+
+                        DialogResult dialogres = MessageBox.Show("Заказ оформлен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Сбой при сохранении данных", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                
             }
             
             
-        }
-
-        private void buttonDobavitTorars_Click(object sender, EventArgs e)             //Попытка корзины
-        {
-            this.Hide();
-            FormTovarLook tovarLook = new FormTovarLook();
-            tovarLook.Show();
         }
     }
 }

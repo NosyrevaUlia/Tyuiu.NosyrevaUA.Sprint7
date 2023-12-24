@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDataNeeded.cs" />
     <Compile Include="FormDoZakaz.cs">
       <SubType>Form</SubType>
     </Compile>

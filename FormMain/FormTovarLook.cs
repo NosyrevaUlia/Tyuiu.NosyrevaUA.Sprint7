@@ -13,6 +13,8 @@ namespace FormMain
 {
     public partial class FormTovarLook : Form
     {
+
+
         public FormTovarLook()
         {
             InitializeComponent();
@@ -59,9 +61,13 @@ namespace FormMain
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormMainMenu Home = new FormMainMenu();
-            Home.Show();
+            DialogResult diares = MessageBox.Show("При переходе на главное меню все введённые данные не сохранятся. Вернуться в главное меню?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (diares == DialogResult.Yes)
+            {
+                this.Hide();
+                FormMainMenu Home = new FormMainMenu();
+                Home.Show();
+            }
         }
         //------------------------------------------------------------------------------------------
         public int Diluc = 0;
@@ -80,8 +86,9 @@ namespace FormMain
             textBoxDilucKolichestvo.Text = Convert.ToString(Diluc);
             if(Diluc!=0)
             {
-                DilucBucketText = labelDiluc.Text + ", Количество: " + Convert.ToString(Diluc) + ", Стоимость: " + Convert.ToString(SumDilucCount);
+                DilucBucketText = labelDiluc.Text + ", Количество: " + Convert.ToString(Diluc) + ", Стоимость: " + Convert.ToString(SumDilucCount) +" руб.";
             }
+            buttonConfirmBuying.Enabled = true;
         }
         private void buttonLumineToBucket_MouseClick(object sender, MouseEventArgs e)
         {
@@ -90,8 +97,9 @@ namespace FormMain
             textBoxLumineKolichestvo.Text = Convert.ToString(Lumine);
             if(Lumine!=0)
             {
-                LumineBucketText = labelLumine.Text + ", Количество: " + Convert.ToString(Lumine) + ", Стоимость: " + Convert.ToString(SumLumineCount);
+                LumineBucketText = labelLumine.Text + ", Количество: " + Convert.ToString(Lumine) + ", Стоимость: " + Convert.ToString(SumLumineCount) + " руб.";
             }
+            buttonConfirmBuying.Enabled = true;
         }
         private void buttonSinSueToBucket_MouseClick(object sender, MouseEventArgs e)
         {
@@ -100,8 +108,9 @@ namespace FormMain
             textBoxSinSueKolichestvo.Text = Convert.ToString(SinSue);
             if (SinSue != 0)
             {
-                SinSueBucketText = labelSinSue.Text + ", Количество: " + Convert.ToString(SinSue) + ", Стоимость: " + Convert.ToString(SumSinSue);
+                SinSueBucketText = labelSinSue.Text + ", Количество: " + Convert.ToString(SinSue) + ", Стоимость: " + Convert.ToString(SumSinSue) + " руб.";
             }
+            buttonConfirmBuying.Enabled = true;
         }
         private void buttonSucroseToBucket_MouseClick(object sender, MouseEventArgs e)
         {
@@ -110,15 +119,16 @@ namespace FormMain
             textBoxSucroseKolichestvo.Text = Convert.ToString(Sucrose);
             if (Sucrose != 0)
             {
-                SucroseBucketText = labelSucrose.Text + ", Количество: " + Convert.ToString(Sucrose) + ", Стоимость: " + Convert.ToString(SumSucrose);
+                SucroseBucketText = labelSucrose.Text + ", Количество: " + Convert.ToString(Sucrose) + ", Стоимость: " + Convert.ToString(SumSucrose) + " руб.";
             }
+            buttonConfirmBuying.Enabled = true;
         }
         //-----------------------------------------------------------------------------------   корзина        
         private void buttonBucket_Click(object sender, EventArgs e)
         {
             int Summa = Convert.ToInt32(textBoxDilucCost.Text) * Diluc + Convert.ToInt32(textBoxLumineCost.Text) * Lumine + Convert.ToInt32(textBoxSinSueCost.Text) * SinSue + Convert.ToInt32(textBoxSucroseCost.Text) * Sucrose;
             if (Summa != 0)
-            { textBoxBucked.Text = DilucBucketText + Environment.NewLine + LumineBucketText + Environment.NewLine + SucroseBucketText + Environment.NewLine + SinSueBucketText + Environment.NewLine + Environment.NewLine + "Итого: " + Summa; }
+            { textBoxBucked.Text = DilucBucketText + Environment.NewLine + LumineBucketText + Environment.NewLine + SucroseBucketText + Environment.NewLine + SinSueBucketText + Environment.NewLine + Environment.NewLine + "Итого: " + Summa + " руб."; }
             
             if(labelYourBucked.Visible == false)
             {
@@ -134,8 +144,22 @@ namespace FormMain
                 labelYourBucked.Visible = false;
                 textBoxBucked.Visible = false;
             }
-            
+        }
 
+        private void buttonConfirmBuying_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Обратите внимание! После перехода на следущую вкладку изменить список товаров будет нельзя. ", "Подтвердите выбор", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dialogResult == DialogResult.Yes)
+                {                    
+                    this.Hide();
+                    FormDoZakaz doZakaz = new FormDoZakaz();
+                    ClassDataNeeded.Text = textBoxBucked.Text;
+                    doZakaz.Show();                    
+                }
+            }
+            catch { MessageBox.Show("Что-то пошло не так", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

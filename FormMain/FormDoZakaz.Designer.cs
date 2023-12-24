@@ -50,21 +50,19 @@ namespace FormMain
             this.textBoxYourNameSecondPlease = new System.Windows.Forms.TextBox();
             this.textBoxYourNameFirstPlease = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.buttonBucket = new System.Windows.Forms.Button();
-            this.buttonDobavitTorars = new System.Windows.Forms.Button();
             this.buttonDoZAKAZ = new System.Windows.Forms.Button();
-            this.splitterLeftRight = new System.Windows.Forms.Splitter();
+            this.buttonBucket = new System.Windows.Forms.Button();
+            this.textBoxBucked = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
-            this.panelRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUp
             // 
             this.panelUp.Controls.Add(this.panelForButtons);
             this.panelUp.Controls.Add(this.buttonHome);
+            this.panelUp.Controls.Add(this.buttonBucket);
             this.panelUp.Controls.Add(this.labelZakaz);
             this.panelUp.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUp.Location = new System.Drawing.Point(0, 0);
@@ -152,6 +150,8 @@ namespace FormMain
             // 
             // panelLeft
             // 
+            this.panelLeft.Controls.Add(this.textBoxBucked);
+            this.panelLeft.Controls.Add(this.buttonDoZAKAZ);
             this.panelLeft.Controls.Add(this.textBoxDataDostavki);
             this.panelLeft.Controls.Add(this.textBoxYourNumber);
             this.panelLeft.Controls.Add(this.textBoxAdress);
@@ -165,10 +165,10 @@ namespace FormMain
             this.panelLeft.Controls.Add(this.textBoxYourNameSecondPlease);
             this.panelLeft.Controls.Add(this.textBoxYourNameFirstPlease);
             this.panelLeft.Controls.Add(this.labelDescription);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLeft.Location = new System.Drawing.Point(0, 135);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(588, 459);
+            this.panelLeft.Size = new System.Drawing.Size(1028, 459);
             this.panelLeft.TabIndex = 2;
             // 
             // textBoxDataDostavki
@@ -302,69 +302,50 @@ namespace FormMain
             this.labelDescription.TabIndex = 0;
             this.labelDescription.Text = "Пожалуйста, введите данные для оформления заказа:";
             // 
-            // panelRight
-            // 
-            this.panelRight.Controls.Add(this.buttonBucket);
-            this.panelRight.Controls.Add(this.buttonDobavitTorars);
-            this.panelRight.Controls.Add(this.buttonDoZAKAZ);
-            this.panelRight.Controls.Add(this.splitterLeftRight);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(588, 135);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(440, 459);
-            this.panelRight.TabIndex = 3;
-            // 
-            // buttonBucket
-            // 
-            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBucket.Location = new System.Drawing.Point(314, 117);
-            this.buttonBucket.Name = "buttonBucket";
-            this.buttonBucket.Size = new System.Drawing.Size(114, 80);
-            this.buttonBucket.TabIndex = 3;
-            this.buttonBucket.UseVisualStyleBackColor = false;
-            // 
-            // buttonDobavitTorars
-            // 
-            this.buttonDobavitTorars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonDobavitTorars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDobavitTorars.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDobavitTorars.Location = new System.Drawing.Point(49, 17);
-            this.buttonDobavitTorars.Name = "buttonDobavitTorars";
-            this.buttonDobavitTorars.Size = new System.Drawing.Size(379, 84);
-            this.buttonDobavitTorars.TabIndex = 2;
-            this.buttonDobavitTorars.Text = "Добавить Товары";
-            this.buttonDobavitTorars.UseVisualStyleBackColor = false;
-            this.buttonDobavitTorars.Click += new System.EventHandler(this.buttonDobavitTorars_Click);
-            // 
             // buttonDoZAKAZ
             // 
             this.buttonDoZAKAZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDoZAKAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.buttonDoZAKAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoZAKAZ.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDoZAKAZ.Location = new System.Drawing.Point(167, 363);
+            this.buttonDoZAKAZ.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDoZAKAZ.Location = new System.Drawing.Point(635, 256);
             this.buttonDoZAKAZ.Name = "buttonDoZAKAZ";
-            this.buttonDoZAKAZ.Size = new System.Drawing.Size(242, 63);
+            this.buttonDoZAKAZ.Size = new System.Drawing.Size(381, 170);
             this.buttonDoZAKAZ.TabIndex = 1;
             this.buttonDoZAKAZ.Text = "Отправить Заказ";
             this.buttonDoZAKAZ.UseVisualStyleBackColor = false;
             this.buttonDoZAKAZ.Click += new System.EventHandler(this.buttonDoZAKAZ_Click);
             // 
-            // splitterLeftRight
+            // buttonBucket
             // 
-            this.splitterLeftRight.Location = new System.Drawing.Point(0, 0);
-            this.splitterLeftRight.Name = "splitterLeftRight";
-            this.splitterLeftRight.Size = new System.Drawing.Size(3, 459);
-            this.splitterLeftRight.TabIndex = 0;
-            this.splitterLeftRight.TabStop = false;
+            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBucket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBucket.Location = new System.Drawing.Point(894, 59);
+            this.buttonBucket.Name = "buttonBucket";
+            this.buttonBucket.Size = new System.Drawing.Size(122, 67);
+            this.buttonBucket.TabIndex = 3;
+            this.buttonBucket.Text = "Корзина";
+            this.buttonBucket.UseVisualStyleBackColor = false;
+            this.buttonBucket.Click += new System.EventHandler(this.buttonBucket_Click);
+            // 
+            // textBoxBucked
+            // 
+            this.textBoxBucked.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxBucked.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBucked.Location = new System.Drawing.Point(0, 0);
+            this.textBoxBucked.Multiline = true;
+            this.textBoxBucked.Name = "textBoxBucked";
+            this.textBoxBucked.ReadOnly = true;
+            this.textBoxBucked.Size = new System.Drawing.Size(1028, 459);
+            this.textBoxBucked.TabIndex = 4;
+            this.textBoxBucked.Visible = false;
             // 
             // FormDoZakaz
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 594);
-            this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -377,7 +358,6 @@ namespace FormMain
             this.panelForButtons.ResumeLayout(false);
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
-            this.panelRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -401,14 +381,12 @@ namespace FormMain
         private System.Windows.Forms.TextBox textBoxAdressPlease;
         private System.Windows.Forms.TextBox textBoxDataDostavki;
         private System.Windows.Forms.TextBox textBoxDataDostavkiPlease;
-        private System.Windows.Forms.Panel panelRight;
-        private System.Windows.Forms.Splitter splitterLeftRight;
-        private System.Windows.Forms.Button buttonDoZAKAZ;
         private System.Windows.Forms.TextBox textBoxYourNameThird;
         private System.Windows.Forms.TextBox textBoxYourNameSecond;
         private System.Windows.Forms.TextBox textBoxYourNameThirdPlease;
         private System.Windows.Forms.TextBox textBoxYourNameSecondPlease;
-        private System.Windows.Forms.Button buttonDobavitTorars;
         private System.Windows.Forms.Button buttonBucket;
+        private System.Windows.Forms.Button buttonDoZAKAZ;
+        private System.Windows.Forms.TextBox textBoxBucked;
     }
 }

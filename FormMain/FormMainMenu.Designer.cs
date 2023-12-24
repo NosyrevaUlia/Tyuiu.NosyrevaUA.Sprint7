@@ -39,7 +39,6 @@ namespace FormMain
             this.panelLeft = new System.Windows.Forms.Panel();
             this.buttonMostPopular = new System.Windows.Forms.Button();
             this.buttonNewComing = new System.Windows.Forms.Button();
-            this.buttonTovarLook = new System.Windows.Forms.Button();
             this.panelCentre = new System.Windows.Forms.Panel();
             this.panelDown = new System.Windows.Forms.Panel();
             this.labelChangeZakaz = new System.Windows.Forms.Label();
@@ -140,7 +139,6 @@ namespace FormMain
             // 
             this.panelLeft.Controls.Add(this.buttonMostPopular);
             this.panelLeft.Controls.Add(this.buttonNewComing);
-            this.panelLeft.Controls.Add(this.buttonTovarLook);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 102);
             this.panelLeft.Name = "panelLeft";
@@ -171,19 +169,6 @@ namespace FormMain
             this.buttonNewComing.Text = "Новинки Сезона\r\n";
             this.buttonNewComing.UseVisualStyleBackColor = false;
             this.buttonNewComing.Click += new System.EventHandler(this.buttonNewComing_Click);
-            // 
-            // buttonTovarLook
-            // 
-            this.buttonTovarLook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonTovarLook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTovarLook.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonTovarLook.Location = new System.Drawing.Point(12, 16);
-            this.buttonTovarLook.Name = "buttonTovarLook";
-            this.buttonTovarLook.Size = new System.Drawing.Size(260, 94);
-            this.buttonTovarLook.TabIndex = 2;
-            this.buttonTovarLook.Text = "Посмотреть Ассортимент";
-            this.buttonTovarLook.UseVisualStyleBackColor = false;
-            this.buttonTovarLook.Click += new System.EventHandler(this.buttonTovarLook_Click);
             // 
             // panelCentre
             // 
@@ -273,7 +258,6 @@ namespace FormMain
 
         private System.Windows.Forms.Panel panelUp;
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Button buttonTovarLook;
         private System.Windows.Forms.Panel panelCentre;
         private System.Windows.Forms.Button buttonNewComing;
         private System.Windows.Forms.Button buttonDoDelivery;

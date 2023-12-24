@@ -38,8 +38,8 @@ namespace FormMain
         private void buttonDoDelivery_Click(object sender, EventArgs e)           //Кнопка заказа
         {
             this.Hide();
-            FormDoZakaz doZakaz = new FormDoZakaz();
-            doZakaz.Show();
+            FormTovarLook tovars = new FormTovarLook();
+            tovars.Show();
 
         }
 
@@ -68,14 +68,6 @@ namespace FormMain
             this.WindowState = FormWindowState.Minimized;
         }
         //---------------------------------------------------------------------------------------------------
-        
-        private void buttonTovarLook_Click(object sender, EventArgs e)            //Посмотреть Ассортимент
-        {
-            this.Hide();
-            FormTovarLook  formTovarLook = new FormTovarLook(); 
-            formTovarLook.Show();
-        }
-
         private void buttonNewComing_Click(object sender, EventArgs e)
         {
             this.Hide();
