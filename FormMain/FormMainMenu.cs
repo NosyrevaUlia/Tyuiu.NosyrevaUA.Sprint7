@@ -45,7 +45,8 @@ namespace FormMain
 
         private void buttonAboutUs_Click(object sender, EventArgs e)              //О нас
         {
-
+            FormAboutUs about = new FormAboutUs();
+            about.ShowDialog();
         }
         //--------------------------------------------------------------------------------------------------
         private void buttonClose_Click(object sender, EventArgs e)                //Кнопка выхода
@@ -67,14 +68,7 @@ namespace FormMain
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        //---------------------------------------------------------------------------------------------------
-        private void buttonNewComing_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormNewComing formNewComing = new FormNewComing();
-            formNewComing.Show();
 
-        }
 
        
     }

@@ -70,6 +70,10 @@ namespace FormMain
             this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
             this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
             this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
+            this.buttonMinDiluc = new System.Windows.Forms.Button();
+            this.buttonMinSucrose = new System.Windows.Forms.Button();
+            this.buttonMinSinSue = new System.Windows.Forms.Button();
+            this.buttonMinLumine = new System.Windows.Forms.Button();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelTovars.SuspendLayout();
@@ -226,18 +230,22 @@ namespace FormMain
             this.panelTovars.Controls.Add(this.buttonLumineToBucket);
             this.panelTovars.Controls.Add(this.buttonSucroseToBucket);
             this.panelTovars.Controls.Add(this.buttonDilucToBucket);
-            this.panelTovars.Controls.Add(this.textBoxSinSue);
-            this.panelTovars.Controls.Add(this.textBoxLumine);
-            this.panelTovars.Controls.Add(this.textBoxSucrose);
-            this.panelTovars.Controls.Add(this.textBoxDiluc);
-            this.panelTovars.Controls.Add(this.labelSinSue);
             this.panelTovars.Controls.Add(this.labelLumine);
             this.panelTovars.Controls.Add(this.labelSucrose);
             this.panelTovars.Controls.Add(this.labelDiluc);
-            this.panelTovars.Controls.Add(this.pictureBoxSinSue);
+            this.panelTovars.Controls.Add(this.buttonMinDiluc);
+            this.panelTovars.Controls.Add(this.buttonMinSucrose);
+            this.panelTovars.Controls.Add(this.buttonMinSinSue);
+            this.panelTovars.Controls.Add(this.buttonMinLumine);
+            this.panelTovars.Controls.Add(this.textBoxDiluc);
+            this.panelTovars.Controls.Add(this.textBoxSucrose);
+            this.panelTovars.Controls.Add(this.textBoxSinSue);
+            this.panelTovars.Controls.Add(this.textBoxLumine);
             this.panelTovars.Controls.Add(this.pictureBoxLumine);
-            this.panelTovars.Controls.Add(this.pictureBoxSucrose);
             this.panelTovars.Controls.Add(this.pictureBoxDiluc);
+            this.panelTovars.Controls.Add(this.labelSinSue);
+            this.panelTovars.Controls.Add(this.pictureBoxSinSue);
+            this.panelTovars.Controls.Add(this.pictureBoxSucrose);
             this.panelTovars.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTovars.Location = new System.Drawing.Point(0, 135);
             this.panelTovars.Name = "panelTovars";
@@ -268,6 +276,7 @@ namespace FormMain
             this.textBoxSinSueKolichestvo.ReadOnly = true;
             this.textBoxSinSueKolichestvo.Size = new System.Drawing.Size(73, 25);
             this.textBoxSinSueKolichestvo.TabIndex = 6;
+            this.textBoxSinSueKolichestvo.Text = "0";
             // 
             // textBoxLumineKolichestvo
             // 
@@ -282,6 +291,7 @@ namespace FormMain
             this.textBoxLumineKolichestvo.ReadOnly = true;
             this.textBoxLumineKolichestvo.Size = new System.Drawing.Size(73, 25);
             this.textBoxLumineKolichestvo.TabIndex = 6;
+            this.textBoxLumineKolichestvo.Text = "0";
             // 
             // textBoxSucroseKolichestvo
             // 
@@ -295,6 +305,7 @@ namespace FormMain
             this.textBoxSucroseKolichestvo.ReadOnly = true;
             this.textBoxSucroseKolichestvo.Size = new System.Drawing.Size(73, 25);
             this.textBoxSucroseKolichestvo.TabIndex = 6;
+            this.textBoxSucroseKolichestvo.Text = "0";
             // 
             // textBoxDilucKolichestvo
             // 
@@ -307,6 +318,7 @@ namespace FormMain
             this.textBoxDilucKolichestvo.ReadOnly = true;
             this.textBoxDilucKolichestvo.Size = new System.Drawing.Size(73, 25);
             this.textBoxDilucKolichestvo.TabIndex = 6;
+            this.textBoxDilucKolichestvo.Text = "0";
             // 
             // labelSinSueInBucked
             // 
@@ -602,6 +614,50 @@ namespace FormMain
             this.pictureBoxDiluc.TabIndex = 0;
             this.pictureBoxDiluc.TabStop = false;
             // 
+            // buttonMinDiluc
+            // 
+            this.buttonMinDiluc.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinDiluc.Image")));
+            this.buttonMinDiluc.Location = new System.Drawing.Point(384, 83);
+            this.buttonMinDiluc.Name = "buttonMinDiluc";
+            this.buttonMinDiluc.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinDiluc.TabIndex = 8;
+            this.buttonMinDiluc.UseVisualStyleBackColor = true;
+            this.buttonMinDiluc.Visible = false;
+            this.buttonMinDiluc.Click += new System.EventHandler(this.buttonMinDiluc_Click);
+            // 
+            // buttonMinSucrose
+            // 
+            this.buttonMinSucrose.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSucrose.Image")));
+            this.buttonMinSucrose.Location = new System.Drawing.Point(885, 83);
+            this.buttonMinSucrose.Name = "buttonMinSucrose";
+            this.buttonMinSucrose.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinSucrose.TabIndex = 8;
+            this.buttonMinSucrose.UseVisualStyleBackColor = true;
+            this.buttonMinSucrose.Visible = false;
+            this.buttonMinSucrose.Click += new System.EventHandler(this.buttonMinSucrose_Click);
+            // 
+            // buttonMinSinSue
+            // 
+            this.buttonMinSinSue.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSinSue.Image")));
+            this.buttonMinSinSue.Location = new System.Drawing.Point(885, 346);
+            this.buttonMinSinSue.Name = "buttonMinSinSue";
+            this.buttonMinSinSue.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinSinSue.TabIndex = 8;
+            this.buttonMinSinSue.UseVisualStyleBackColor = true;
+            this.buttonMinSinSue.Visible = false;
+            this.buttonMinSinSue.Click += new System.EventHandler(this.buttonMinSinSue_Click);
+            // 
+            // buttonMinLumine
+            // 
+            this.buttonMinLumine.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinLumine.Image")));
+            this.buttonMinLumine.Location = new System.Drawing.Point(384, 343);
+            this.buttonMinLumine.Name = "buttonMinLumine";
+            this.buttonMinLumine.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinLumine.TabIndex = 8;
+            this.buttonMinLumine.UseVisualStyleBackColor = true;
+            this.buttonMinLumine.Visible = false;
+            this.buttonMinLumine.Click += new System.EventHandler(this.buttonMinLumine_Click);
+            // 
             // FormTovarLook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -671,5 +727,9 @@ namespace FormMain
         private System.Windows.Forms.Label labelYourBucked;
         private System.Windows.Forms.Button buttonConfirmBuying;
         public System.Windows.Forms.TextBox textBoxBucked;
+        private System.Windows.Forms.Button buttonMinLumine;
+        private System.Windows.Forms.Button buttonMinSinSue;
+        private System.Windows.Forms.Button buttonMinSucrose;
+        private System.Windows.Forms.Button buttonMinDiluc;
     }
 }

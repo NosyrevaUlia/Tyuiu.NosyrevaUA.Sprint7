@@ -47,17 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassDataNeeded.cs" />
+    <Compile Include="FormAboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutUs.Designer.cs">
+      <DependentUpon>FormAboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDoZakaz.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDoZakaz.Designer.cs">
       <DependentUpon>FormDoZakaz.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNewComing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNewComing.Designer.cs">
-      <DependentUpon>FormNewComing.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTovarLook.cs">
       <SubType>Form</SubType>
@@ -73,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAboutUs.resx">
+      <DependentUpon>FormAboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDoZakaz.resx">
       <DependentUpon>FormDoZakaz.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,9 +84,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTovarLook.resx">
       <DependentUpon>FormTovarLook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormNewComing.resx">
-      <DependentUpon>FormNewComing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

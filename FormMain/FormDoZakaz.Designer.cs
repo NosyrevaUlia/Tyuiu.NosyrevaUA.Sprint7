@@ -36,8 +36,11 @@ namespace FormMain
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonBucket = new System.Windows.Forms.Button();
             this.labelZakaz = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.textBoxBucked = new System.Windows.Forms.TextBox();
+            this.buttonDoZAKAZ = new System.Windows.Forms.Button();
             this.textBoxDataDostavki = new System.Windows.Forms.TextBox();
             this.textBoxYourNumber = new System.Windows.Forms.TextBox();
             this.textBoxAdress = new System.Windows.Forms.TextBox();
@@ -51,9 +54,6 @@ namespace FormMain
             this.textBoxYourNameSecondPlease = new System.Windows.Forms.TextBox();
             this.textBoxYourNameFirstPlease = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.buttonDoZAKAZ = new System.Windows.Forms.Button();
-            this.buttonBucket = new System.Windows.Forms.Button();
-            this.textBoxBucked = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -137,6 +137,20 @@ namespace FormMain
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
+            // buttonBucket
+            // 
+            this.buttonBucket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBucket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBucket.Location = new System.Drawing.Point(894, 59);
+            this.buttonBucket.Name = "buttonBucket";
+            this.buttonBucket.Size = new System.Drawing.Size(122, 67);
+            this.buttonBucket.TabIndex = 3;
+            this.buttonBucket.Text = "Корзина";
+            this.buttonBucket.UseVisualStyleBackColor = false;
+            this.buttonBucket.Click += new System.EventHandler(this.buttonBucket_Click);
+            // 
             // labelZakaz
             // 
             this.labelZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -174,6 +188,32 @@ namespace FormMain
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(1028, 459);
             this.panelLeft.TabIndex = 2;
+            // 
+            // textBoxBucked
+            // 
+            this.textBoxBucked.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxBucked.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBucked.Location = new System.Drawing.Point(0, 0);
+            this.textBoxBucked.Multiline = true;
+            this.textBoxBucked.Name = "textBoxBucked";
+            this.textBoxBucked.ReadOnly = true;
+            this.textBoxBucked.Size = new System.Drawing.Size(1028, 459);
+            this.textBoxBucked.TabIndex = 4;
+            this.textBoxBucked.Visible = false;
+            // 
+            // buttonDoZAKAZ
+            // 
+            this.buttonDoZAKAZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDoZAKAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.buttonDoZAKAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoZAKAZ.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDoZAKAZ.Location = new System.Drawing.Point(635, 256);
+            this.buttonDoZAKAZ.Name = "buttonDoZAKAZ";
+            this.buttonDoZAKAZ.Size = new System.Drawing.Size(381, 170);
+            this.buttonDoZAKAZ.TabIndex = 1;
+            this.buttonDoZAKAZ.Text = "Отправить Заказ";
+            this.buttonDoZAKAZ.UseVisualStyleBackColor = false;
+            this.buttonDoZAKAZ.Click += new System.EventHandler(this.buttonDoZAKAZ_Click);
             // 
             // textBoxDataDostavki
             // 
@@ -305,46 +345,6 @@ namespace FormMain
             this.labelDescription.Size = new System.Drawing.Size(787, 34);
             this.labelDescription.TabIndex = 0;
             this.labelDescription.Text = "Пожалуйста, введите данные для оформления заказа:";
-            // 
-            // buttonDoZAKAZ
-            // 
-            this.buttonDoZAKAZ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDoZAKAZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.buttonDoZAKAZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoZAKAZ.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDoZAKAZ.Location = new System.Drawing.Point(635, 256);
-            this.buttonDoZAKAZ.Name = "buttonDoZAKAZ";
-            this.buttonDoZAKAZ.Size = new System.Drawing.Size(381, 170);
-            this.buttonDoZAKAZ.TabIndex = 1;
-            this.buttonDoZAKAZ.Text = "Отправить Заказ";
-            this.buttonDoZAKAZ.UseVisualStyleBackColor = false;
-            this.buttonDoZAKAZ.Click += new System.EventHandler(this.buttonDoZAKAZ_Click);
-            // 
-            // buttonBucket
-            // 
-            this.buttonBucket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBucket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonBucket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBucket.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBucket.Location = new System.Drawing.Point(894, 59);
-            this.buttonBucket.Name = "buttonBucket";
-            this.buttonBucket.Size = new System.Drawing.Size(122, 67);
-            this.buttonBucket.TabIndex = 3;
-            this.buttonBucket.Text = "Корзина";
-            this.buttonBucket.UseVisualStyleBackColor = false;
-            this.buttonBucket.Click += new System.EventHandler(this.buttonBucket_Click);
-            // 
-            // textBoxBucked
-            // 
-            this.textBoxBucked.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxBucked.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxBucked.Location = new System.Drawing.Point(0, 0);
-            this.textBoxBucked.Multiline = true;
-            this.textBoxBucked.Name = "textBoxBucked";
-            this.textBoxBucked.ReadOnly = true;
-            this.textBoxBucked.Size = new System.Drawing.Size(1028, 459);
-            this.textBoxBucked.TabIndex = 4;
-            this.textBoxBucked.Visible = false;
             // 
             // FormDoZakaz
             // 

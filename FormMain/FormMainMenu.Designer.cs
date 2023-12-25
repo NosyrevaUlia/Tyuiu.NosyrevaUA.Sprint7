@@ -37,16 +37,12 @@ namespace FormMain
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonAboutUs = new System.Windows.Forms.Button();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.buttonNewComing = new System.Windows.Forms.Button();
             this.panelCentre = new System.Windows.Forms.Panel();
             this.panelDown = new System.Windows.Forms.Panel();
-            this.labelChangeZakaz = new System.Windows.Forms.Label();
-            this.buttonCgangeZakaz = new System.Windows.Forms.Button();
             this.buttonDoDelivery = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
-            this.panelLeft.SuspendLayout();
             this.panelCentre.SuspendLayout();
             this.panelDown.SuspendLayout();
             this.SuspendLayout();
@@ -138,86 +134,55 @@ namespace FormMain
             this.buttonAboutUs.UseVisualStyleBackColor = false;
             this.buttonAboutUs.Click += new System.EventHandler(this.buttonAboutUs_Click);
             // 
-            // panelLeft
-            // 
-            this.panelLeft.Controls.Add(this.buttonNewComing);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 102);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(272, 492);
-            this.panelLeft.TabIndex = 1;
-            // 
-            // buttonNewComing
-            // 
-            this.buttonNewComing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonNewComing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNewComing.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNewComing.Location = new System.Drawing.Point(12, 23);
-            this.buttonNewComing.Name = "buttonNewComing";
-            this.buttonNewComing.Size = new System.Drawing.Size(260, 94);
-            this.buttonNewComing.TabIndex = 2;
-            this.buttonNewComing.Text = "Новинки Сезона\r\n";
-            this.buttonNewComing.UseVisualStyleBackColor = false;
-            this.buttonNewComing.Click += new System.EventHandler(this.buttonNewComing_Click);
-            // 
             // panelCentre
             // 
             this.panelCentre.Controls.Add(this.panelDown);
-            this.panelCentre.Controls.Add(this.buttonDoDelivery);
             this.panelCentre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCentre.Location = new System.Drawing.Point(272, 102);
+            this.panelCentre.Location = new System.Drawing.Point(0, 102);
             this.panelCentre.Name = "panelCentre";
-            this.panelCentre.Size = new System.Drawing.Size(756, 492);
+            this.panelCentre.Size = new System.Drawing.Size(1028, 492);
             this.panelCentre.TabIndex = 2;
             // 
             // panelDown
             // 
-            this.panelDown.Controls.Add(this.labelChangeZakaz);
-            this.panelDown.Controls.Add(this.buttonCgangeZakaz);
-            this.panelDown.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelDown.Location = new System.Drawing.Point(0, 332);
+            this.panelDown.Controls.Add(this.textBox1);
+            this.panelDown.Controls.Add(this.buttonDoDelivery);
+            this.panelDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDown.Location = new System.Drawing.Point(0, 0);
             this.panelDown.Name = "panelDown";
-            this.panelDown.Size = new System.Drawing.Size(756, 160);
+            this.panelDown.Size = new System.Drawing.Size(1028, 492);
             this.panelDown.TabIndex = 2;
-            // 
-            // labelChangeZakaz
-            // 
-            this.labelChangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelChangeZakaz.AutoSize = true;
-            this.labelChangeZakaz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChangeZakaz.Location = new System.Drawing.Point(89, 31);
-            this.labelChangeZakaz.Name = "labelChangeZakaz";
-            this.labelChangeZakaz.Size = new System.Drawing.Size(493, 60);
-            this.labelChangeZakaz.TabIndex = 1;
-            this.labelChangeZakaz.Text = "Если вы хотите внести \r\nкорректировки в свой заказ, вы можете";
-            // 
-            // buttonCgangeZakaz
-            // 
-            this.buttonCgangeZakaz.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCgangeZakaz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCgangeZakaz.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCgangeZakaz.Location = new System.Drawing.Point(439, 20);
-            this.buttonCgangeZakaz.Name = "buttonCgangeZakaz";
-            this.buttonCgangeZakaz.Size = new System.Drawing.Size(255, 107);
-            this.buttonCgangeZakaz.TabIndex = 0;
-            this.buttonCgangeZakaz.Text = "Изменить Заказ";
-            this.buttonCgangeZakaz.UseVisualStyleBackColor = true;
             // 
             // buttonDoDelivery
             // 
-            this.buttonDoDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDoDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.buttonDoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDoDelivery.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDoDelivery.Location = new System.Drawing.Point(6, 189);
+            this.buttonDoDelivery.Location = new System.Drawing.Point(96, 332);
             this.buttonDoDelivery.Name = "buttonDoDelivery";
-            this.buttonDoDelivery.Size = new System.Drawing.Size(688, 120);
+            this.buttonDoDelivery.Size = new System.Drawing.Size(841, 109);
             this.buttonDoDelivery.TabIndex = 1;
             this.buttonDoDelivery.Text = "Сделать Заказ";
             this.buttonDoDelivery.UseVisualStyleBackColor = false;
             this.buttonDoDelivery.Click += new System.EventHandler(this.buttonDoDelivery_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBox1.Location = new System.Drawing.Point(96, 62);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(841, 111);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Добро пожаловать! Здесь вы можете заказать акриловую фигурку.";
             // 
             // FormMainMenu
             // 
@@ -225,7 +190,6 @@ namespace FormMain
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 594);
             this.Controls.Add(this.panelCentre);
-            this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelUp);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
@@ -236,7 +200,6 @@ namespace FormMain
             this.panelUp.ResumeLayout(false);
             this.panelUp.PerformLayout();
             this.panelForButtons.ResumeLayout(false);
-            this.panelLeft.ResumeLayout(false);
             this.panelCentre.ResumeLayout(false);
             this.panelDown.ResumeLayout(false);
             this.panelDown.PerformLayout();
@@ -247,19 +210,16 @@ namespace FormMain
         #endregion
 
         private System.Windows.Forms.Panel panelUp;
-        private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelCentre;
-        private System.Windows.Forms.Button buttonNewComing;
         private System.Windows.Forms.Button buttonDoDelivery;
         private System.Windows.Forms.Button buttonAboutUs;
         private System.Windows.Forms.Panel panelDown;
-        private System.Windows.Forms.Label labelChangeZakaz;
-        private System.Windows.Forms.Button buttonCgangeZakaz;
         private System.Windows.Forms.Panel panelForButtons;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Label labelmainMenu;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
