@@ -29,6 +29,7 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTovarLook));
             this.panelUp = new System.Windows.Forms.Panel();
             this.buttonConfirmBuying = new System.Windows.Forms.Button();
@@ -58,29 +59,30 @@ namespace FormMain
             this.buttonLumineToBucket = new System.Windows.Forms.Button();
             this.buttonSucroseToBucket = new System.Windows.Forms.Button();
             this.buttonDilucToBucket = new System.Windows.Forms.Button();
-            this.textBoxSinSue = new System.Windows.Forms.TextBox();
-            this.textBoxLumine = new System.Windows.Forms.TextBox();
-            this.textBoxSucrose = new System.Windows.Forms.TextBox();
-            this.textBoxDiluc = new System.Windows.Forms.TextBox();
-            this.labelSinSue = new System.Windows.Forms.Label();
             this.labelLumine = new System.Windows.Forms.Label();
             this.labelSucrose = new System.Windows.Forms.Label();
             this.labelDiluc = new System.Windows.Forms.Label();
-            this.pictureBoxSinSue = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
             this.buttonMinDiluc = new System.Windows.Forms.Button();
             this.buttonMinSucrose = new System.Windows.Forms.Button();
             this.buttonMinSinSue = new System.Windows.Forms.Button();
             this.buttonMinLumine = new System.Windows.Forms.Button();
+            this.textBoxDiluc = new System.Windows.Forms.TextBox();
+            this.textBoxSucrose = new System.Windows.Forms.TextBox();
+            this.textBoxSinSue = new System.Windows.Forms.TextBox();
+            this.textBoxLumine = new System.Windows.Forms.TextBox();
+            this.pictureBoxLumine = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDiluc = new System.Windows.Forms.PictureBox();
+            this.labelSinSue = new System.Windows.Forms.Label();
+            this.pictureBoxSinSue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSucrose = new System.Windows.Forms.PictureBox();
+            this.toolTipTips = new System.Windows.Forms.ToolTip(this.components);
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelTovars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUp
@@ -106,6 +108,7 @@ namespace FormMain
             this.buttonConfirmBuying.Size = new System.Drawing.Size(110, 70);
             this.buttonConfirmBuying.TabIndex = 6;
             this.buttonConfirmBuying.Text = "Подтвердить выбор";
+            this.toolTipTips.SetToolTip(this.buttonConfirmBuying, "Начать заполнение заказа");
             this.buttonConfirmBuying.UseVisualStyleBackColor = true;
             this.buttonConfirmBuying.Click += new System.EventHandler(this.buttonConfirmBuying_Click);
             // 
@@ -194,6 +197,7 @@ namespace FormMain
             this.buttonHome.Size = new System.Drawing.Size(110, 41);
             this.buttonHome.TabIndex = 1;
             this.buttonHome.Text = "На Главную";
+            this.toolTipTips.SetToolTip(this.buttonHome, "Выйти на главный экран");
             this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
@@ -469,76 +473,6 @@ namespace FormMain
             this.buttonDilucToBucket.UseVisualStyleBackColor = false;
             this.buttonDilucToBucket.Click += new System.EventHandler(this.buttonDilucToBucket_Click);
             // 
-            // textBoxSinSue
-            // 
-            this.textBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSinSue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxSinSue.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSinSue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxSinSue.Location = new System.Drawing.Point(723, 261);
-            this.textBoxSinSue.Multiline = true;
-            this.textBoxSinSue.Name = "textBoxSinSue";
-            this.textBoxSinSue.ReadOnly = true;
-            this.textBoxSinSue.Size = new System.Drawing.Size(173, 177);
-            this.textBoxSinSue.TabIndex = 2;
-            this.textBoxSinSue.Text = "Цена, руб.:";
-            // 
-            // textBoxLumine
-            // 
-            this.textBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxLumine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxLumine.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxLumine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxLumine.Location = new System.Drawing.Point(224, 261);
-            this.textBoxLumine.Multiline = true;
-            this.textBoxLumine.Name = "textBoxLumine";
-            this.textBoxLumine.ReadOnly = true;
-            this.textBoxLumine.Size = new System.Drawing.Size(171, 177);
-            this.textBoxLumine.TabIndex = 2;
-            this.textBoxLumine.Text = "Цена, руб.: ";
-            // 
-            // textBoxSucrose
-            // 
-            this.textBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxSucrose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxSucrose.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSucrose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxSucrose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxSucrose.Location = new System.Drawing.Point(723, 41);
-            this.textBoxSucrose.Multiline = true;
-            this.textBoxSucrose.Name = "textBoxSucrose";
-            this.textBoxSucrose.ReadOnly = true;
-            this.textBoxSucrose.Size = new System.Drawing.Size(173, 177);
-            this.textBoxSucrose.TabIndex = 2;
-            this.textBoxSucrose.Text = "Цена, руб.:";
-            // 
-            // textBoxDiluc
-            // 
-            this.textBoxDiluc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.textBoxDiluc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDiluc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.textBoxDiluc.Location = new System.Drawing.Point(224, 41);
-            this.textBoxDiluc.Multiline = true;
-            this.textBoxDiluc.Name = "textBoxDiluc";
-            this.textBoxDiluc.ReadOnly = true;
-            this.textBoxDiluc.Size = new System.Drawing.Size(171, 177);
-            this.textBoxDiluc.TabIndex = 2;
-            this.textBoxDiluc.Text = "Цена, руб.: ";
-            // 
-            // labelSinSue
-            // 
-            this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSinSue.AutoSize = true;
-            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelSinSue.Location = new System.Drawing.Point(717, 226);
-            this.labelSinSue.Name = "labelSinSue";
-            this.labelSinSue.Size = new System.Drawing.Size(407, 34);
-            this.labelSinSue.TabIndex = 1;
-            this.labelSinSue.Text = "Фигурка акриловая Син Сю";
-            // 
             // labelLumine
             // 
             this.labelLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -571,16 +505,115 @@ namespace FormMain
             this.labelDiluc.TabIndex = 1;
             this.labelDiluc.Text = "Фигурка акриловая Дилюк";
             // 
-            // pictureBoxSinSue
+            // buttonMinDiluc
             // 
-            this.pictureBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSinSue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSinSue.Image")));
-            this.pictureBoxSinSue.Location = new System.Drawing.Point(505, 224);
-            this.pictureBoxSinSue.Name = "pictureBoxSinSue";
-            this.pictureBoxSinSue.Size = new System.Drawing.Size(285, 223);
-            this.pictureBoxSinSue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSinSue.TabIndex = 0;
-            this.pictureBoxSinSue.TabStop = false;
+            this.buttonMinDiluc.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinDiluc.Image")));
+            this.buttonMinDiluc.Location = new System.Drawing.Point(384, 83);
+            this.buttonMinDiluc.Name = "buttonMinDiluc";
+            this.buttonMinDiluc.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinDiluc.TabIndex = 8;
+            this.toolTipTips.SetToolTip(this.buttonMinDiluc, "Убрать из корзины");
+            this.buttonMinDiluc.UseVisualStyleBackColor = true;
+            this.buttonMinDiluc.Visible = false;
+            this.buttonMinDiluc.Click += new System.EventHandler(this.buttonMinDiluc_Click);
+            // 
+            // buttonMinSucrose
+            // 
+            this.buttonMinSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMinSucrose.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSucrose.Image")));
+            this.buttonMinSucrose.Location = new System.Drawing.Point(885, 83);
+            this.buttonMinSucrose.Name = "buttonMinSucrose";
+            this.buttonMinSucrose.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinSucrose.TabIndex = 8;
+            this.toolTipTips.SetToolTip(this.buttonMinSucrose, "Убрать из корзины");
+            this.buttonMinSucrose.UseVisualStyleBackColor = true;
+            this.buttonMinSucrose.Visible = false;
+            this.buttonMinSucrose.Click += new System.EventHandler(this.buttonMinSucrose_Click);
+            // 
+            // buttonMinSinSue
+            // 
+            this.buttonMinSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMinSinSue.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSinSue.Image")));
+            this.buttonMinSinSue.Location = new System.Drawing.Point(885, 304);
+            this.buttonMinSinSue.Name = "buttonMinSinSue";
+            this.buttonMinSinSue.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinSinSue.TabIndex = 8;
+            this.toolTipTips.SetToolTip(this.buttonMinSinSue, "Убрать из корзины");
+            this.buttonMinSinSue.UseVisualStyleBackColor = true;
+            this.buttonMinSinSue.Visible = false;
+            this.buttonMinSinSue.Click += new System.EventHandler(this.buttonMinSinSue_Click);
+            // 
+            // buttonMinLumine
+            // 
+            this.buttonMinLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonMinLumine.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinLumine.Image")));
+            this.buttonMinLumine.Location = new System.Drawing.Point(384, 304);
+            this.buttonMinLumine.Name = "buttonMinLumine";
+            this.buttonMinLumine.Size = new System.Drawing.Size(45, 37);
+            this.buttonMinLumine.TabIndex = 8;
+            this.toolTipTips.SetToolTip(this.buttonMinLumine, "Убрать из корзины");
+            this.buttonMinLumine.UseVisualStyleBackColor = true;
+            this.buttonMinLumine.Visible = false;
+            this.buttonMinLumine.Click += new System.EventHandler(this.buttonMinLumine_Click);
+            // 
+            // textBoxDiluc
+            // 
+            this.textBoxDiluc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxDiluc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDiluc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDiluc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxDiluc.Location = new System.Drawing.Point(224, 41);
+            this.textBoxDiluc.Multiline = true;
+            this.textBoxDiluc.Name = "textBoxDiluc";
+            this.textBoxDiluc.ReadOnly = true;
+            this.textBoxDiluc.Size = new System.Drawing.Size(171, 177);
+            this.textBoxDiluc.TabIndex = 2;
+            this.textBoxDiluc.Text = "Цена, руб.: ";
+            // 
+            // textBoxSucrose
+            // 
+            this.textBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSucrose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSucrose.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSucrose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSucrose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSucrose.Location = new System.Drawing.Point(723, 41);
+            this.textBoxSucrose.Multiline = true;
+            this.textBoxSucrose.Name = "textBoxSucrose";
+            this.textBoxSucrose.ReadOnly = true;
+            this.textBoxSucrose.Size = new System.Drawing.Size(173, 177);
+            this.textBoxSucrose.TabIndex = 2;
+            this.textBoxSucrose.Text = "Цена, руб.:";
+            // 
+            // textBoxSinSue
+            // 
+            this.textBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSinSue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxSinSue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSinSue.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSinSue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxSinSue.Location = new System.Drawing.Point(723, 261);
+            this.textBoxSinSue.Multiline = true;
+            this.textBoxSinSue.Name = "textBoxSinSue";
+            this.textBoxSinSue.ReadOnly = true;
+            this.textBoxSinSue.Size = new System.Drawing.Size(173, 177);
+            this.textBoxSinSue.TabIndex = 2;
+            this.textBoxSinSue.Text = "Цена, руб.:";
+            // 
+            // textBoxLumine
+            // 
+            this.textBoxLumine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxLumine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.textBoxLumine.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLumine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxLumine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.textBoxLumine.Location = new System.Drawing.Point(224, 261);
+            this.textBoxLumine.Multiline = true;
+            this.textBoxLumine.Name = "textBoxLumine";
+            this.textBoxLumine.ReadOnly = true;
+            this.textBoxLumine.Size = new System.Drawing.Size(171, 177);
+            this.textBoxLumine.TabIndex = 2;
+            this.textBoxLumine.Text = "Цена, руб.: ";
             // 
             // pictureBoxLumine
             // 
@@ -593,17 +626,6 @@ namespace FormMain
             this.pictureBoxLumine.TabIndex = 0;
             this.pictureBoxLumine.TabStop = false;
             // 
-            // pictureBoxSucrose
-            // 
-            this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSucrose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSucrose.Image")));
-            this.pictureBoxSucrose.Location = new System.Drawing.Point(505, 3);
-            this.pictureBoxSucrose.Name = "pictureBoxSucrose";
-            this.pictureBoxSucrose.Size = new System.Drawing.Size(285, 215);
-            this.pictureBoxSucrose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxSucrose.TabIndex = 0;
-            this.pictureBoxSucrose.TabStop = false;
-            // 
             // pictureBoxDiluc
             // 
             this.pictureBoxDiluc.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiluc.Image")));
@@ -614,49 +636,38 @@ namespace FormMain
             this.pictureBoxDiluc.TabIndex = 0;
             this.pictureBoxDiluc.TabStop = false;
             // 
-            // buttonMinDiluc
+            // labelSinSue
             // 
-            this.buttonMinDiluc.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinDiluc.Image")));
-            this.buttonMinDiluc.Location = new System.Drawing.Point(384, 83);
-            this.buttonMinDiluc.Name = "buttonMinDiluc";
-            this.buttonMinDiluc.Size = new System.Drawing.Size(45, 37);
-            this.buttonMinDiluc.TabIndex = 8;
-            this.buttonMinDiluc.UseVisualStyleBackColor = true;
-            this.buttonMinDiluc.Visible = false;
-            this.buttonMinDiluc.Click += new System.EventHandler(this.buttonMinDiluc_Click);
+            this.labelSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSinSue.AutoSize = true;
+            this.labelSinSue.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSinSue.Location = new System.Drawing.Point(717, 226);
+            this.labelSinSue.Name = "labelSinSue";
+            this.labelSinSue.Size = new System.Drawing.Size(407, 34);
+            this.labelSinSue.TabIndex = 1;
+            this.labelSinSue.Text = "Фигурка акриловая Син Сю";
             // 
-            // buttonMinSucrose
+            // pictureBoxSinSue
             // 
-            this.buttonMinSucrose.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSucrose.Image")));
-            this.buttonMinSucrose.Location = new System.Drawing.Point(885, 83);
-            this.buttonMinSucrose.Name = "buttonMinSucrose";
-            this.buttonMinSucrose.Size = new System.Drawing.Size(45, 37);
-            this.buttonMinSucrose.TabIndex = 8;
-            this.buttonMinSucrose.UseVisualStyleBackColor = true;
-            this.buttonMinSucrose.Visible = false;
-            this.buttonMinSucrose.Click += new System.EventHandler(this.buttonMinSucrose_Click);
+            this.pictureBoxSinSue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSinSue.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSinSue.Image")));
+            this.pictureBoxSinSue.Location = new System.Drawing.Point(505, 224);
+            this.pictureBoxSinSue.Name = "pictureBoxSinSue";
+            this.pictureBoxSinSue.Size = new System.Drawing.Size(285, 223);
+            this.pictureBoxSinSue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSinSue.TabIndex = 0;
+            this.pictureBoxSinSue.TabStop = false;
             // 
-            // buttonMinSinSue
+            // pictureBoxSucrose
             // 
-            this.buttonMinSinSue.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinSinSue.Image")));
-            this.buttonMinSinSue.Location = new System.Drawing.Point(885, 346);
-            this.buttonMinSinSue.Name = "buttonMinSinSue";
-            this.buttonMinSinSue.Size = new System.Drawing.Size(45, 37);
-            this.buttonMinSinSue.TabIndex = 8;
-            this.buttonMinSinSue.UseVisualStyleBackColor = true;
-            this.buttonMinSinSue.Visible = false;
-            this.buttonMinSinSue.Click += new System.EventHandler(this.buttonMinSinSue_Click);
-            // 
-            // buttonMinLumine
-            // 
-            this.buttonMinLumine.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinLumine.Image")));
-            this.buttonMinLumine.Location = new System.Drawing.Point(384, 343);
-            this.buttonMinLumine.Name = "buttonMinLumine";
-            this.buttonMinLumine.Size = new System.Drawing.Size(45, 37);
-            this.buttonMinLumine.TabIndex = 8;
-            this.buttonMinLumine.UseVisualStyleBackColor = true;
-            this.buttonMinLumine.Visible = false;
-            this.buttonMinLumine.Click += new System.EventHandler(this.buttonMinLumine_Click);
+            this.pictureBoxSucrose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSucrose.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSucrose.Image")));
+            this.pictureBoxSucrose.Location = new System.Drawing.Point(505, 3);
+            this.pictureBoxSucrose.Name = "pictureBoxSucrose";
+            this.pictureBoxSucrose.Size = new System.Drawing.Size(285, 215);
+            this.pictureBoxSucrose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxSucrose.TabIndex = 0;
+            this.pictureBoxSucrose.TabStop = false;
             // 
             // FormTovarLook
             // 
@@ -677,10 +688,10 @@ namespace FormMain
             this.panelForButtons.ResumeLayout(false);
             this.panelTovars.ResumeLayout(false);
             this.panelTovars.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLumine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiluc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSinSue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSucrose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -731,5 +742,6 @@ namespace FormMain
         private System.Windows.Forms.Button buttonMinSinSue;
         private System.Windows.Forms.Button buttonMinSucrose;
         private System.Windows.Forms.Button buttonMinDiluc;
+        private System.Windows.Forms.ToolTip toolTipTips;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using FirstLib;
 using System.IO;
 
 namespace FormMain
@@ -20,6 +21,7 @@ namespace FormMain
             this.ControlBox = false;
             this.Text = string.Empty;
         }
+
 
         //-----------------------------------------------------------------------------------------------   Двигать окно
         //-----------------------------------------------------------------------------------------------
@@ -36,7 +38,6 @@ namespace FormMain
         }
         //-----------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------
-
         private void buttonMinimize_Click(object sender, EventArgs e)             
         {
             this.WindowState = FormWindowState.Minimized;
@@ -83,24 +84,34 @@ namespace FormMain
                 textBoxBucked.Visible = false;
             }
         }
+
+        
         private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
-        {            
+        {
             if((textBoxYourNameFirst.Text) == "" || (textBoxYourNameSecond.Text=="") || (textBoxYourNameThird.Text=="") || (textBoxYourNumber.Text=="") || (textBoxDataDostavki.Text=="") || (textBoxAdress.Text == "")) { MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             else
             {
+                FirstLibrary ds = new FirstLibrary();
+                int numberforscv = ds.Number($@"C:\Users\Юлия\source\repos\Tyuiu.NosyrevaUA.Sprint7\FormMain\bin\Debug\DataCustomers.csv");
                 DialogResult diares = MessageBox.Show("Перед отправкой внимательно проверьте правильность введённых данных. Отправить заказ?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if(diares == DialogResult.Yes)
                 {
                     try
                     {
+                        
                         StringBuilder scv = new StringBuilder();
 
                         string pathToSavescv = $@"{Directory.GetCurrentDirectory()}\DataCustomers.csv";
-
-                        scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text + ";");
+                        
+                        scv.AppendLine(textBoxYourNameFirst.Text + ";" + textBoxYourNameSecond.Text + ";" + textBoxYourNameThird.Text + ";" + textBoxYourNumber.Text + ";" + textBoxDataDostavki.Text + ";" + textBoxAdress.Text + ";"+numberforscv);
                         File.AppendAllText(pathToSavescv, scv.ToString(), Encoding.GetEncoding(1251));
 
-                        DialogResult dialogres = MessageBox.Show("Заказ оформлен", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DialogResult dialogres = MessageBox.Show("Заказ оформлен. При необходимости изменения заказа звоните по номеру, указанному на сайте магазина.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        FormMainMenu menu = new FormMainMenu();
+                        this.Hide();
+                        menu.Show();
+
                     }
                     catch
                     {

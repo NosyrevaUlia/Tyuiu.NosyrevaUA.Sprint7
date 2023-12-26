@@ -29,6 +29,7 @@ namespace FormMain
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelUp = new System.Windows.Forms.Panel();
             this.labelmainMenu = new System.Windows.Forms.Label();
@@ -39,8 +40,9 @@ namespace FormMain
             this.buttonAboutUs = new System.Windows.Forms.Button();
             this.panelCentre = new System.Windows.Forms.Panel();
             this.panelDown = new System.Windows.Forms.Panel();
-            this.buttonDoDelivery = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonDoDelivery = new System.Windows.Forms.Button();
+            this.toolTipTips = new System.Windows.Forms.ToolTip(this.components);
             this.panelUp.SuspendLayout();
             this.panelForButtons.SuspendLayout();
             this.panelCentre.SuspendLayout();
@@ -92,6 +94,7 @@ namespace FormMain
             this.buttonMinimize.Name = "buttonMinimize";
             this.buttonMinimize.Size = new System.Drawing.Size(54, 29);
             this.buttonMinimize.TabIndex = 1;
+            this.toolTipTips.SetToolTip(this.buttonMinimize, "Скрыть окно");
             this.buttonMinimize.UseVisualStyleBackColor = true;
             this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
             // 
@@ -105,6 +108,7 @@ namespace FormMain
             this.buttonMaximize.Name = "buttonMaximize";
             this.buttonMaximize.Size = new System.Drawing.Size(54, 29);
             this.buttonMaximize.TabIndex = 1;
+            this.toolTipTips.SetToolTip(this.buttonMaximize, "Во весь экран");
             this.buttonMaximize.UseVisualStyleBackColor = true;
             this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
             // 
@@ -118,6 +122,7 @@ namespace FormMain
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(54, 29);
             this.buttonClose.TabIndex = 0;
+            this.toolTipTips.SetToolTip(this.buttonClose, "Выйти из программы");
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
@@ -131,6 +136,7 @@ namespace FormMain
             this.buttonAboutUs.Size = new System.Drawing.Size(110, 41);
             this.buttonAboutUs.TabIndex = 0;
             this.buttonAboutUs.Text = "О Нас";
+            this.toolTipTips.SetToolTip(this.buttonAboutUs, "Информация о программе");
             this.buttonAboutUs.UseVisualStyleBackColor = false;
             this.buttonAboutUs.Click += new System.EventHandler(this.buttonAboutUs_Click);
             // 
@@ -153,21 +159,6 @@ namespace FormMain
             this.panelDown.Size = new System.Drawing.Size(1028, 492);
             this.panelDown.TabIndex = 2;
             // 
-            // buttonDoDelivery
-            // 
-            this.buttonDoDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.buttonDoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDoDelivery.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDoDelivery.Location = new System.Drawing.Point(96, 332);
-            this.buttonDoDelivery.Name = "buttonDoDelivery";
-            this.buttonDoDelivery.Size = new System.Drawing.Size(841, 109);
-            this.buttonDoDelivery.TabIndex = 1;
-            this.buttonDoDelivery.Text = "Сделать Заказ";
-            this.buttonDoDelivery.UseVisualStyleBackColor = false;
-            this.buttonDoDelivery.Click += new System.EventHandler(this.buttonDoDelivery_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -183,6 +174,27 @@ namespace FormMain
             this.textBox1.Size = new System.Drawing.Size(841, 111);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Добро пожаловать! Здесь вы можете заказать акриловую фигурку.";
+            // 
+            // buttonDoDelivery
+            // 
+            this.buttonDoDelivery.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDoDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.buttonDoDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDoDelivery.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDoDelivery.Location = new System.Drawing.Point(96, 332);
+            this.buttonDoDelivery.Name = "buttonDoDelivery";
+            this.buttonDoDelivery.Size = new System.Drawing.Size(841, 109);
+            this.buttonDoDelivery.TabIndex = 1;
+            this.buttonDoDelivery.Text = "Сделать Заказ";
+            this.toolTipTips.SetToolTip(this.buttonDoDelivery, "Сделать заказ");
+            this.buttonDoDelivery.UseVisualStyleBackColor = false;
+            this.buttonDoDelivery.Click += new System.EventHandler(this.buttonDoDelivery_Click);
+            // 
+            // toolTipTips
+            // 
+            this.toolTipTips.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.toolTipTips.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             // 
             // FormMainMenu
             // 
@@ -220,6 +232,7 @@ namespace FormMain
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Label labelmainMenu;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolTip toolTipTips;
     }
 }
 

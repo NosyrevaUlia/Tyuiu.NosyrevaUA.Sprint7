@@ -37,22 +37,32 @@
             this.textBoxUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.textBoxUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBoxUp.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBoxUp.Location = new System.Drawing.Point(0, 0);
             this.textBoxUp.Multiline = true;
             this.textBoxUp.Name = "textBoxUp";
+            this.textBoxUp.ReadOnly = true;
             this.textBoxUp.Size = new System.Drawing.Size(918, 275);
             this.textBoxUp.TabIndex = 0;
+            this.textBoxUp.Text = "Программа создана для создания пользователем заказа на товар из магазина акриловы" +
+    "х фигурок.\r\n\r\nПрограмма создана в рамках выполнения 7 спринта.";
             // 
             // textBoDown
             // 
             this.textBoDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.textBoDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoDown.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
             this.textBoDown.Location = new System.Drawing.Point(0, 275);
             this.textBoDown.Multiline = true;
             this.textBoDown.Name = "textBoDown";
+            this.textBoDown.ReadOnly = true;
             this.textBoDown.Size = new System.Drawing.Size(918, 248);
             this.textBoDown.TabIndex = 1;
+            this.textBoDown.Text = "Создатель программы: Носырева Юлия Алексеевна, студент Тюменского Индустриального" +
+    " Университета, группа ИИПб-23-3";
             // 
             // FormAboutUs
             // 
@@ -63,7 +73,9 @@
             this.Controls.Add(this.textBoDown);
             this.Controls.Add(this.textBoxUp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormAboutUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "О программе";
             this.ResumeLayout(false);
             this.PerformLayout();
