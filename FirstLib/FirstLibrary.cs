@@ -16,20 +16,12 @@ namespace FirstLib
         public int Number(string path)
         {
             using (StreamReader reader = new StreamReader(path))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    len++;
-                }
-
+            {                
                 string fileData = File.ReadAllText(path);
 
                 fileData = fileData.Replace('\n', '\r');
                 string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries); 
                 int rows = lines.Length;
-                int nums = lines[0].Split(';').Length;
-
                 
                 for (int r = 0; r < rows; r++)
                 {
