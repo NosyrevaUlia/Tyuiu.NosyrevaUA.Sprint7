@@ -20,8 +20,7 @@ namespace FormMain
             this.Text = string.Empty;
             this.ControlBox = false;
         }
-        //---------------------------------------------------------------------------------------------------
-        //---------------------------------------------------------------------------------------------------    Двигать окно
+        // Двигать окно
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.Dll", EntryPoint = "SendMessage")]
@@ -32,10 +31,9 @@ namespace FormMain
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //---------------------------------------------------------------------------------------------------
-        //---------------------------------------------------------------------------------------------------
+        
 
-        private void buttonDoDelivery_Click(object sender, EventArgs e)           //Кнопка заказа
+        private void buttonDoDelivery_Click(object sender, EventArgs e)           
         {
             this.Hide();
             FormTovarLook tovars = new FormTovarLook();
@@ -43,20 +41,20 @@ namespace FormMain
 
         }
 
-        private void buttonAboutUs_Click(object sender, EventArgs e)              //О нас
+        private void buttonAboutUs_Click(object sender, EventArgs e)              
         {
             FormAboutUs about = new FormAboutUs();
             about.ShowDialog();
         }
-        //--------------------------------------------------------------------------------------------------
-        private void buttonClose_Click(object sender, EventArgs e)                //Кнопка выхода
+        
+        private void buttonClose_Click(object sender, EventArgs e)                
         {
             Application.Exit();
         }
 
-        private void buttonMaximize_Click(object sender, EventArgs e)             //Кнопка во весь экран
+        private void buttonMaximize_Click(object sender, EventArgs e)             
         {
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; //Ограничение
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; 
             if (WindowState== FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
@@ -64,7 +62,7 @@ namespace FormMain
             else { this.WindowState = FormWindowState.Normal; }
         }
 
-        private void buttonMinimize_Click(object sender, EventArgs e)             //Кнопка сжатия
+        private void buttonMinimize_Click(object sender, EventArgs e)            
         {
             this.WindowState = FormWindowState.Minimized;
         }

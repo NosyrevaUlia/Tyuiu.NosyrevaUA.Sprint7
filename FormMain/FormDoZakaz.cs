@@ -24,7 +24,6 @@ namespace FormMain
 
 
         //-----------------------------------------------------------------------------------------------   Двигать окно
-        //-----------------------------------------------------------------------------------------------
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.Dll", EntryPoint = "SendMessage")]
@@ -36,8 +35,7 @@ namespace FormMain
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //-----------------------------------------------------------------------------------------------
-        //-----------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------
         private void buttonMinimize_Click(object sender, EventArgs e)             
         {
             this.WindowState = FormWindowState.Minimized;
@@ -45,7 +43,7 @@ namespace FormMain
 
         private void buttonMaximize_Click(object sender, EventArgs e)             
         {
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; //Ограничение
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; 
             if (WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
@@ -68,8 +66,7 @@ namespace FormMain
                 Home.Show();
             }
         }
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
         private void buttonBucket_Click(object sender, EventArgs e)
         {
             textBoxBucked.Text = ClassDataNeeded.Text;
@@ -86,7 +83,7 @@ namespace FormMain
         }
 
         
-        private void buttonDoZAKAZ_Click(object sender, EventArgs e)              //Кнопка создания заказа 
+        private void buttonDoZAKAZ_Click(object sender, EventArgs e)               
         {
             if((textBoxYourNameFirst.Text) == "" || (textBoxYourNameSecond.Text=="") || (textBoxYourNameThird.Text=="") || (textBoxYourNumber.Text=="") || (textBoxDataDostavki.Text=="") || (textBoxAdress.Text == "")) { MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             else

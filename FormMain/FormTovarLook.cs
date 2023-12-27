@@ -21,8 +21,7 @@ namespace FormMain
             this.Text = string.Empty;
             this.ControlBox = false;
         }
-        //---------------------------------------------------------------------------------------------------
-        //---------------------------------------------------------------------------------------------------    Двигать окно
+        //   Двигать окно
         [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.Dll", EntryPoint = "SendMessage")]
@@ -33,19 +32,18 @@ namespace FormMain
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        //---------------------------------------------------------------------------------------------------
-        //---------------------------------------------------------------------------------------------------
+        
 
-        private void buttonClose_Click(object sender, EventArgs e)                //Exit But
+        private void buttonClose_Click(object sender, EventArgs e)                
         {
             Application.Exit();
             this.Text = string.Empty;
             this.ControlBox = false;
         }        
 
-        private void buttonMaximize_Click(object sender, EventArgs e)             //Maximized But
+        private void buttonMaximize_Click(object sender, EventArgs e)             
         {
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; //Ограничение
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea; 
             if (WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
@@ -53,11 +51,11 @@ namespace FormMain
             else { this.WindowState = FormWindowState.Normal; }
         }
 
-        private void buttonMinimize_Click(object sender, EventArgs e)              //Minimized But
+        private void buttonMinimize_Click(object sender, EventArgs e)              
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        //------------------------------------------------------------------------------------------
+
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
@@ -69,7 +67,7 @@ namespace FormMain
                 Home.Show();
             }
         }
-        //------------------------------------------------------------------------------------------
+        
         public int Diluc = 0;
         public int Sucrose = 0;
         public int Lumine = 0;
@@ -212,8 +210,7 @@ namespace FormMain
             if ((Diluc == 0) && (Sucrose == 0) && (Lumine == 0) && (SinSue == 0)) { buttonConfirmBuying.Enabled = false; }
         }
 
-
-        //-----------------------------------------------------------------------------------   корзина        
+        
         private void buttonBucket_Click(object sender, EventArgs e)
         {
             if ((Diluc == 0) && (Sucrose == 0) && (Lumine == 0) && (SinSue == 0))
